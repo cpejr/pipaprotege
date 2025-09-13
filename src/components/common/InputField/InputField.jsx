@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledInput } from "./StyledInputField";
 
 const InputField = ({ placeholder, status, ...rest }) => {

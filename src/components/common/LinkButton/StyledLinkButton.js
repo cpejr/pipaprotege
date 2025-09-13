@@ -12,9 +12,9 @@ export const StyledLinkButton = styled(Link)`
   text-decoration: none;
   width: 426px;
   height: 106px;
-  background-color: ${(props) => props.bgColor || COLORS.purple};
-  color: ${(props) => props.color || COLORS.white};
-  border: 3px solid ${(props) => props.borderColor || "black"};
+  background-color: ${(props) => props.$bgColor || COLORS.purple};
+  color: ${(props) => props.$color || COLORS.white};
+  border: 3px solid ${(props) => props.$borderColor || "black"};
   font-size: 28px;
   font-weight: bold;
   font-family: Arial;

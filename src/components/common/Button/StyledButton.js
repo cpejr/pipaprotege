@@ -18,7 +18,6 @@ export const StyledButton = styled(AntdButton)`
   display: flex;
   align-items: center;
 
-  /* Estilos padrão para os botões */
   &.close,
   &.avancar,
   &.voltar,
@@ -32,8 +31,6 @@ export const StyledButton = styled(AntdButton)`
       font-size: 16px;
     }
   }
-
-  /* Estilos específicos para o tipo 'fechar' */
   &.close {
     background-color: ${COLORS.yellow};
     color: ${COLORS.text};
@@ -42,7 +39,7 @@ export const StyledButton = styled(AntdButton)`
     .anticon {
       background-color: ${COLORS.purple};
       color: ${COLORS.white};
-      padding: 0 40px;
+      padding: 0px 40px;
       height: 100%;
       display: flex;
       align-items: center;
@@ -56,7 +53,6 @@ export const StyledButton = styled(AntdButton)`
     }
   }
 
-  /* Estilos para os tipos 'avancar' e 'voltar' */
   &.avancar,
   &.voltar {
     background-color: ${COLORS.yellow};
@@ -85,22 +81,19 @@ export const StyledButton = styled(AntdButton)`
     }
   }
 
-  /* Estilo específico para 'voltar' */
   &.voltar {
     flex-direction: row-reverse;
   }
 
-  /* Estilos para o tipo 'ok' */
   &.ok {
     background-color: ${COLORS.purple};
     color: ${COLORS.white};
     border: none;
     width: 76px;
-    height: 62.39px;
+    height: 76px;
     justify-content: center;
   }
 
-  /* Estilos para o tipo 'iniciar' */
   &.iniciar {
     background-color: ${COLORS.purple};
     color: ${COLORS.white};
@@ -108,5 +101,46 @@ export const StyledButton = styled(AntdButton)`
     width: 426px;
     height: 106px;
     justify-content: center;
+  }
+
+  &.close:hover,
+  &.close:focus,
+  &.close:active {
+    background-color: ${COLORS.yellow} !important;
+    color: ${COLORS.text} !important;
+    border: none !important;
+  }
+
+  &.avancar:hover,
+  &.avancar:focus,
+  &.avancar:active {
+    background-color: ${COLORS.yellow} !important;
+    color: ${COLORS.text} !important;
+    border: none !important;
+  }
+
+  &.voltar:hover,
+  &.voltar:focus,
+  &.voltar:active {
+    background-color: ${COLORS.yellow} !important;
+    color: ${COLORS.text} !important;
+    border: none !important;
+    flex-direction: row-reverse !important;
+  }
+
+  &.ok:hover,
+  &.ok:focus,
+  &.ok:active {
+    background-color: ${COLORS.purple} !important;
+    color: ${COLORS.white} !important;
+    border: none !important;
+  }
+
+  &.iniciar:hover,
+  &.iniciar:focus,
+  &.iniciar:active {
+    background-color: ${COLORS.purple} !important;
+    color: ${COLORS.white} !important;
+    border: 4px solid ${COLORS.white} !important;
   }
 `;

@@ -1,5 +1,3 @@
-import React from "react";
-import styled from "styled-components";
 import { CloseOutlined, ArrowRightOutlined, ArrowLeftOutlined } from "@ant-design/icons";
 import { StyledButton } from "./StyledButton";
 
