@@ -1,31 +1,40 @@
 import { Modal } from "antd";
 import styled from "styled-components";
-import Button from "./Button";
+import Button from "../Button/Button";
 
 const ModalContent = styled.div`
   text-align: center;
   padding: 20px;
   font-family: Arial, sans-serif;
+  color: black;
 `;
 
-const CustomModal = ({ title, children, isOpen, onClose, onConfirm, okText, cancelText }) => {
+const ModalImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+`;
+
+const BotaoFechar = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1;
+`;
+
+const CustomModal = ({ children, isOpen, onClose, imageUrl, showCloseButton = false, footer }) => {
   return (
-    <Modal
-      title={title}
-      open={isOpen}
-      onOk={onConfirm}
-      onCancel={onClose}
-      footer={[
-        <Button key='cancel' onClick={onClose} type='default'>
-          {cancelText || "Cancelar"}
-        </Button>,
-        <Button key='ok' onClick={onConfirm} type='primary'>
-          {okText || "OK"}
-        </Button>,
-      ]}
-    >
+    <Modal open={isOpen} onCancel={onClose} footer={footer} title={null} closeIcon={false}>
       <ModalContent>
-        {children} {/*conteúdo*/}
+        {showCloseButton && (
+          <BotaoFechar onClick={onClose}>
+            <Button type='close' />
+          </BotaoFechar>
+        )}
+        {imageUrl && <ModalImage src={imageUrl} alt='Modal Visual' />}
+        {children}
       </ModalContent>
     </Modal>
   );

@@ -8,6 +8,16 @@ export const COLORS = {
   white: "#FFFFFF",
 };
 
+const HoverBotaoAmarelo = styled(AntdButton)`
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: ${COLORS.yellow} !important;
+    color: ${COLORS.text} !important;
+    border: none !important;
+  }
+`;
+
 export const StyledButton = styled(AntdButton)`
   font-family: Arial;
   font-weight: bold;
@@ -22,8 +32,8 @@ export const StyledButton = styled(AntdButton)`
   &.avancar,
   &.voltar,
   &.iniciar {
-    width: 426px;
-    height: 106px;
+    width: 28%;
+    height: 14%;
 
     @media (max-width: 480px) {
       width: 90vw;
@@ -51,6 +61,7 @@ export const StyledButton = styled(AntdButton)`
         padding: 0 20px;
       }
     }
+    ${HoverBotaoAmarelo};
   }
 
   &.avancar,
@@ -79,19 +90,33 @@ export const StyledButton = styled(AntdButton)`
       justify-content: center;
       font-size: 40px;
     }
+    ${HoverBotaoAmarelo};
   }
 
   &.voltar {
     flex-direction: row-reverse;
+    &:hover,
+    &:focus,
+    &:active {
+      flex-direction: row-reverse !important;
+    }
   }
 
   &.ok {
     background-color: ${COLORS.purple};
     color: ${COLORS.white};
     border: none;
-    width: 76px;
-    height: 76px;
+    width: 7%;
+    height: 14%;
     justify-content: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: ${COLORS.purple} !important;
+      color: ${COLORS.white} !important;
+      border: none !important;
+    }
   }
 
   &.iniciar {
@@ -101,46 +126,13 @@ export const StyledButton = styled(AntdButton)`
     width: 426px;
     height: 106px;
     justify-content: center;
-  }
 
-  &.close:hover,
-  &.close:focus,
-  &.close:active {
-    background-color: ${COLORS.yellow} !important;
-    color: ${COLORS.text} !important;
-    border: none !important;
-  }
-
-  &.avancar:hover,
-  &.avancar:focus,
-  &.avancar:active {
-    background-color: ${COLORS.yellow} !important;
-    color: ${COLORS.text} !important;
-    border: none !important;
-  }
-
-  &.voltar:hover,
-  &.voltar:focus,
-  &.voltar:active {
-    background-color: ${COLORS.yellow} !important;
-    color: ${COLORS.text} !important;
-    border: none !important;
-    flex-direction: row-reverse !important;
-  }
-
-  &.ok:hover,
-  &.ok:focus,
-  &.ok:active {
-    background-color: ${COLORS.purple} !important;
-    color: ${COLORS.white} !important;
-    border: none !important;
-  }
-
-  &.iniciar:hover,
-  &.iniciar:focus,
-  &.iniciar:active {
-    background-color: ${COLORS.purple} !important;
-    color: ${COLORS.white} !important;
-    border: 4px solid ${COLORS.white} !important;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: ${COLORS.purple} !important;
+      color: ${COLORS.white} !important;
+      border: none !important;
+    }
   }
 `;
