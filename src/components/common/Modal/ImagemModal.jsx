@@ -1,7 +1,7 @@
-// src/components/Modal/ImageAndCloseModal.jsx
 import { useState } from "react";
 import styled from "styled-components";
 import CustomModal from "./CustomModal";
+import Button from "../Button/Button";
 
 const YellowButton = styled.button`
   background-color: #f5bd58;
@@ -17,6 +17,11 @@ const YellowButton = styled.button`
   }
 `;
 
+const FooterContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
 function ImagemModal({ content, imageUrl }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -25,13 +30,18 @@ function ImagemModal({ content, imageUrl }) {
 
   return (
     <>
-      <YellowButton onClick={handleOpenModal}>Modal Imagem</YellowButton>
+      <YellowButton onClick={handleOpenModal}>Modal</YellowButton>
       <CustomModal
         isOpen={isModalOpen}
-        onClose={handleCloseModal}
         imageUrl={imageUrl}
-        showCloseButton={true}
-        showOkButton={false}
+        footer={[
+          <FooterContainer key='footer-container'>
+            <Button onClick={handleCloseModal} type='ok' key='ok'>
+              {" "}
+              OK{" "}
+            </Button>
+          </FooterContainer>,
+        ]}
       >
         {content}
       </CustomModal>

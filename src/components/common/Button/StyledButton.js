@@ -106,8 +106,8 @@ export const StyledButton = styled(AntdButton)`
     background-color: ${COLORS.purple};
     color: ${COLORS.white};
     border: none;
-    width: 7%;
-    height: 14%;
+    width: 100px;
+    height: 90px;
     justify-content: center;
 
     &:hover,

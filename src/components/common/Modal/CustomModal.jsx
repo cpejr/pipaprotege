@@ -1,11 +1,11 @@
 import { Modal } from "antd";
 import styled from "styled-components";
-import Button from "../Button/Button";
 
 const ModalContent = styled.div`
   text-align: center;
-  padding: 20px;
+  padding: 50px;
   font-family: Arial, sans-serif;
+  font-size: 25px;
   color: black;
 `;
 
@@ -15,24 +15,10 @@ const ModalImage = styled.img`
   margin-bottom: 20px;
 `;
 
-const BotaoFechar = styled.div`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  z-index: 1;
-`;
-
-const CustomModal = ({ children, isOpen, onClose, imageUrl, showCloseButton = false, footer }) => {
+const CustomModal = ({ children, isOpen, imageUrl, footer }) => {
   return (
-    <Modal open={isOpen} onCancel={onClose} footer={footer} title={null} closeIcon={false}>
+    <Modal open={isOpen} footer={footer} title={null} closeIcon={false}>
       <ModalContent>
-        {showCloseButton && (
-          <BotaoFechar onClick={onClose}>
-            <Button type='close' />
-          </BotaoFechar>
-        )}
         {imageUrl && <ModalImage src={imageUrl} alt='Modal Visual' />}
         {children}
       </ModalContent>

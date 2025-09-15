@@ -17,6 +17,11 @@ const YellowButton = styled.button`
   }
 `;
 
+const FooterContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
 function TextoModal({ content }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -25,15 +30,16 @@ function TextoModal({ content }) {
 
   return (
     <>
-      <YellowButton onClick={handleOpenModal}>Modal Texto</YellowButton>
+      <YellowButton onClick={handleOpenModal}>Modal</YellowButton>
       <CustomModal
         isOpen={isModalOpen}
-        onClose={handleCloseModal}
         footer={[
-          <Button onClick={handleCloseModal} type='ok' key='ok'>
-            {" "}
-            OK{" "}
-          </Button>,
+          <FooterContainer key='footer-container'>
+            <Button onClick={handleCloseModal} type='ok' key='ok'>
+              {" "}
+              OK{" "}
+            </Button>
+          </FooterContainer>,
         ]}
       >
         {content}

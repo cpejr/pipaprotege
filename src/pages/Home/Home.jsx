@@ -1,13 +1,9 @@
 import { TelaInicial, StyleButton, OrganizeButton, StyleLink } from "./Styles";
-import TextoModal from "../../components/common/Modal/TextoModal";
 
 export default function Home() {
-  const text1 = "Não é legal quando alguém mostra foto ou vídeos de pessoas sem roupa para você.";
-
   return (
     <TelaInicial>
       <OrganizeButton>
-        <TextoModal content={<p>{text1}</p>} />
         <StyleLink to='/jogar'>
           <StyleButton bgColor='#FDB92E'>JOGAR</StyleButton>
         </StyleLink>
