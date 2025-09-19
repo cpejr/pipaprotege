@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import Cartilha from "./pages/Cartilha/Cartilha";
 import Denuncia from "./pages/Denuncia/Denuncia";
 import DeOndeVim from "./pages/DeOndeVim/DeOndeVim";
+import Teste from "./pages/Teste/teste";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/de-onde-vim",
     element: <DeOndeVim />,
+  },
+  {
+    path: "/Teste",
+    element: <Teste />,
   },
 ]);
 

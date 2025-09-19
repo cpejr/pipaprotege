@@ -11,7 +11,7 @@ const Button = ({ children, onClick, type, ...rest }) => {
     iconComponent = <ArrowLeftOutlined />;
   }
 
-  if (type === "avancar" || type === "voltar") {
+  if (type === "avancar" || type === "voltar" || type === "close") {
     return (
       <StyledButton className={type} onClick={onClick} {...rest}>
         <div className='yellow-wrapper'>{children}</div>
