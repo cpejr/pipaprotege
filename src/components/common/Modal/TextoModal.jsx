@@ -30,7 +30,7 @@ function TextoModal({ content }) {
 
   return (
     <>
-      <YellowButton onClick={handleOpenModal}>Modal</YellowButton>
+      <YellowButton onClick={handleOpenModal}>TextoModal</YellowButton>
       <CustomModal
         isOpen={isModalOpen}
         footer={[

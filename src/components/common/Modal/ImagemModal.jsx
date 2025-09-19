@@ -30,7 +30,7 @@ function ImagemModal({ content, imageUrl }) {
 
   return (
     <>
-      <YellowButton onClick={handleOpenModal}>Modal</YellowButton>
+      <YellowButton onClick={handleOpenModal}>ImagemModal</YellowButton>
       <CustomModal
         isOpen={isModalOpen}
         imageUrl={imageUrl}
