@@ -22,7 +22,7 @@ const FooterContainer = styled.div`
   justify-content: flex-end;
 `;
 
-function ImagemModal({ content, imageUrl }) {
+function ModalButton({ content, imageUrl, buttonText = "Abrir Modal" }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
@@ -30,15 +30,14 @@ function ImagemModal({ content, imageUrl }) {
 
   return (
     <>
-      <YellowButton onClick={handleOpenModal}>ImagemModal</YellowButton>
+      <YellowButton onClick={handleOpenModal}>{buttonText}</YellowButton>
       <CustomModal
         isOpen={isModalOpen}
         imageUrl={imageUrl}
         footer={[
           <FooterContainer key='footer-container'>
             <Button onClick={handleCloseModal} type='ok' key='ok'>
-              {" "}
-              OK{" "}
+              OK
             </Button>
           </FooterContainer>,
         ]}
@@ -49,4 +48,4 @@ function ImagemModal({ content, imageUrl }) {
   );
 }
 
-export default ImagemModal;
+export default ModalButton;

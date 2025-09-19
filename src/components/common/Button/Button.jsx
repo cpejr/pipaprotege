@@ -3,11 +3,11 @@ import { StyledButton } from "./StyledButton";
 
 const Button = ({ children, onClick, type, ...rest }) => {
   let iconComponent;
-  if (type === "close") {
+  if (type === "close" || type === "xis") {
     iconComponent = <CloseOutlined />;
-  } else if (type === "avancar") {
+  } else if (type === "avancar" || type === "setaFrente") {
     iconComponent = <ArrowRightOutlined />;
-  } else if (type === "voltar") {
+  } else if (type === "voltar" || type === "setaTras") {
     iconComponent = <ArrowLeftOutlined />;
   }
 

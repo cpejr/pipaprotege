@@ -31,6 +31,32 @@ export const StyledButton = styled(AntdButton)`
       font-size: 16px;
     }
   }
+
+  &.xis {
+    background-color: ${COLORS.purple};
+    color: ${COLORS.white};
+    border: none;
+    width: 7%;
+    height: 13%;
+    justify-content: center;
+
+    .anticon {
+      background-color: ${COLORS.purple};
+      color: ${COLORS.white};
+      padding: 0px 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+
+      @media (max-width: 480px) {
+        font-size: 25px;
+        padding: 0 10px;
+      }
+    }
+  }
+
   &.close {
     background-color: ${COLORS.yellow};
     color: ${COLORS.text};
@@ -106,6 +132,31 @@ export const StyledButton = styled(AntdButton)`
     justify-content: center;
   }
 
+  &.setaFrente,
+  &.setaTras {
+    background-color: ${COLORS.purple};
+    color: ${COLORS.white};
+    border: none;
+    width: 7%;
+    height: 13%;
+    justify-content: center;
+
+    .anticon {
+      background-color: ${COLORS.purple};
+      color: ${COLORS.white};
+      width: 100px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+  }
+
+  &.setaTras {
+    flex-direction: row-reverse;
+  }
+
   &.iniciar {
     background-color: ${COLORS.purple};
     color: ${COLORS.white};
@@ -117,12 +168,7 @@ export const StyledButton = styled(AntdButton)`
 
   &.close:hover,
   &.close:focus,
-  &.close:active {
-    background-color: ${COLORS.yellow} !important;
-    color: ${COLORS.text} !important;
-    border: none !important;
-  }
-
+  &.close:active,
   &.avancar:hover,
   &.avancar:focus,
   &.avancar:active {
@@ -142,7 +188,13 @@ export const StyledButton = styled(AntdButton)`
 
   &.ok:hover,
   &.ok:focus,
-  &.ok:active {
+  &.ok:active,
+  &.setaFrente:hover,
+  &.setaFrente:focus,
+  &.setaFrente:active,
+  &.setaTras:hover,
+  &.setaTras:focus,
+  &.setaTras:active {
     background-color: ${COLORS.purple} !important;
     color: ${COLORS.white} !important;
     border: none !important;
