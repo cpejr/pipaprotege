@@ -8,7 +8,11 @@ export default function Home() {
           <StyleButton bgColor='#FDB92E'>JOGAR</StyleButton>
         </StyleLink>
 
+<<<<<<< HEAD
         <StyleLink to='/cartilha'>
+=======
+        <StyleLink to='/cartilha' marginTop='45px'>
+>>>>>>> main
           <StyleButton bgColor='#A367F7' borderColor='white' color='white'>
             CARTILHA
           </StyleButton>
