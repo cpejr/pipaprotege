@@ -127,8 +127,10 @@ export const StyledButton = styled(AntdButton)`
     background-color: ${COLORS.purple};
     color: ${COLORS.white};
     border: none;
-    width: 7%;
-    height: 13%;
+    width: 6%;
+    min-height: 60px;
+    min-width: 120px;
+    height: 12%;
     justify-content: center;
   }
 
