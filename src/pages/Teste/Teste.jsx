@@ -11,7 +11,7 @@ export default function Teste() {
     <TelaInicial>
       <ModalButton content={text1} buttonText='TextoModal' />
       <ModalButton content={text2} imageUrl={backgroundImage} buttonText='ImagemModal' />
-      <Button type='ok'>OK</Button>
+      <Button type='avancar'>AVANCAR</Button>
       <InputModal placeholder='Digite seu nome' />
     </TelaInicial>
   );
