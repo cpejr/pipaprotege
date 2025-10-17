@@ -43,6 +43,7 @@ const FooterContainer = styled.div`
 
 function InputModal({
   initialPlaceholder = 'DIGITE AQUI O SEU NOME DEPOIS CLIQUE EM "OK" PARA SALVAR',
+  buttonText = "InputModal",
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -62,7 +63,7 @@ function InputModal({
 
   return (
     <>
-      <YellowButton onClick={handleOpenModal}>InputModal</YellowButton>
+      <YellowButton onClick={handleOpenModal}>{buttonText}</YellowButton>
 
       <CustomModal
         isOpen={isModalOpen}

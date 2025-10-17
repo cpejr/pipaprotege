@@ -4,8 +4,9 @@ import Cartilha from "./pages/Cartilha/Cartilha";
 import Denuncia from "./pages/Denuncia/Denuncia";
 import DeOndeVim from "./pages/DeOndeVim/DeOndeVim";
 import Teste from "./pages/Teste/Teste";
-import C1_Tela_01 from "./pages/Capitulo1/Pag1_1";
 import C1_Introducao from "./pages/Capitulo1/C1_Introducao/C1_Introducao";
+import C1_Tela_01 from "./pages/Capitulo1/Pag1_1";
+import C1_Tela_02 from "./pages/Capitulo1/Pag1_2";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/capitulo1/tela-01",
     element: <C1_Tela_01 />,
+  },
+  {
+    path: "/capitulo1/tela-02",
+    element: <C1_Tela_02 />,
   },
 ]);
 

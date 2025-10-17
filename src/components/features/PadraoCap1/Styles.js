@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Escola from "../../../assets/Capitulo1Img/Escola.png";
+import Balao_De_Fala from "../../../assets/Capitulo1Img/Balao_De_Fala.png";
 
 import EmPe1 from "../../../assets/Capitulo1Img/Cachorro/EmPe1.png";
 import EmPe2 from "../../../assets/Capitulo1Img/Cachorro/EmPe2.png";
@@ -18,25 +19,38 @@ export const TelaCenario = styled.div`
   position: relative;
 `;
 
-export const TextoBalao = styled.p`
+export const BalaoImagem = styled.div`
   position: absolute;
-  top: 35%;
-  left: 20%;
-  width: 30%;
+  top: 30%;
+  left: 23%;
+
+  width: 400px;
+  height: 250px;
+  z-index: 15;
+
+  background-image: url(${Balao_De_Fala});
+  background-size: contain;
+  background-repeat: no-repeat;
+`;
+
+export const TextoBalao = styled.p`
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 80%;
+  margin: 0;
 
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   font-family: Arial;
   color: #333;
-  padding: 15px;
   line-height: 1.4;
 
   @media (max-width: 480px) {
-    font-size: 14px;
-    width: 60%;
-    left: 15%;
-    top: 30%;
+    font-size: 16px;
   }
 `;
 

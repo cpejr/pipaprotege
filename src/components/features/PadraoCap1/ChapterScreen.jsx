@@ -2,6 +2,7 @@ import Button from "../../common/Button/Button";
 
 import {
   TelaCenario,
+  BalaoImagem,
   TextoBalao,
   CachorroOverlay,
   BotaoContainer,
@@ -19,7 +20,9 @@ const ChapterScreen = ({
 
   return (
     <TelaCenario>
-      <TextoBalao>{text}</TextoBalao>
+      <BalaoImagem>
+        <TextoBalao>{text}</TextoBalao>
+      </BalaoImagem>
 
       {characterImage && (
         <CachorroOverlay src={characterImage} alt={`Personagem Cachorro ${characterVariant}`} />
