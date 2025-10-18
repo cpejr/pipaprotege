@@ -7,6 +7,7 @@ import Teste from "./pages/Teste/Teste";
 import C1_Introducao from "./pages/Capitulo1/C1_Introducao/C1_Introducao";
 import C1_Tela_01 from "./pages/Capitulo1/Pag1_1";
 import C1_Tela_02 from "./pages/Capitulo1/Pag1_2";
+import C1_Tela_03 from "./pages/Capitulo1/Pag1_3";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/capitulo1/tela-02",
     element: <C1_Tela_02 />,
+  },
+  {
+    path: "/capitulo1/tela-03",
+    element: <C1_Tela_03 />,
   },
 ]);
 

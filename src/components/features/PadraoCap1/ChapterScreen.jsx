@@ -7,7 +7,7 @@ import {
   CachorroOverlay,
   BotaoContainer,
   CHARACTER_IMAGES,
-} from "./Styles.js";
+} from "./ChapterStyles.js";
 
 const ChapterScreen = ({
   text,
@@ -30,19 +30,15 @@ const ChapterScreen = ({
 
       <BotaoContainer>
         {showOtherButton && onOtherButtonClick && (
-          <StyleLink as='div' onClick={onOtherButtonClick}>
-            <StyleButton bgColor='#A367F7' borderColor='white' color='white'>
-              Agora não
-            </StyleButton>
-          </StyleLink>
+          <Button type='voltar' onClick={onOtherButtonClick}>
+            Agora não
+          </Button>
         )}
 
         {onAdvance && (
-          <div style={{ width: 180, height: 60, display: "flex", alignItems: "center" }}>
-            <Button onClick={onAdvance} type='avancar'>
-              AVANÇAR
-            </Button>
-          </div>
+          <Button onClick={onAdvance} type='avancar'>
+            AVANÇAR
+          </Button>
         )}
       </BotaoContainer>
     </TelaCenario>

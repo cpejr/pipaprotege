@@ -35,7 +35,7 @@ export const BalaoImagem = styled.div`
 
 export const TextoBalao = styled.p`
   position: relative;
-  top: 25%;
+  top: 18%;
   left: 50%;
   transform: translateX(-50%);
 
@@ -68,6 +68,6 @@ export const BotaoContainer = styled.div`
   bottom: 20px;
   right: 20px;
   display: flex;
-  gap: 15px;
+  gap: 60px;
   z-index: 20;
 `;

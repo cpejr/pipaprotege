@@ -8,12 +8,12 @@ const C1_Tela_02 = () => {
 
   const handleNameSaved = (savedName) => {
     console.log(`[Página 2] Nome salvo: ${savedName}.`);
-    navigate("/chapter1/tela-03");
+    navigate("/capitulo1/tela-03");
   };
 
   return (
     <BackgroundAzul>
-      <InputModal buttonText='Insira aqui o seu nome' />
+      <InputModal />
     </BackgroundAzul>
   );
 };
