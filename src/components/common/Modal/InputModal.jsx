@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import CustomModal from "./CustomModal";
 import Button from "../Button/Button";
 
@@ -43,9 +44,12 @@ const FooterContainer = styled.div`
 
 function InputModal({
   initialPlaceholder = 'DIGITE AQUI O SEU NOME DEPOIS CLIQUE EM "OK" PARA SALVAR',
+  nextPath,
+  backPath,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
@@ -56,8 +60,13 @@ function InputModal({
 
   const handleSave = () => {
     console.log("Valor salvo:", inputValue);
-    alert(`O nome digitado foi: ${inputValue}`);
     handleCloseModal();
+
+    if (nextPath) {
+      navigate(nextPath);
+    } else if (backPath) {
+      navigate(backPath);
+    }
   };
 
   return (

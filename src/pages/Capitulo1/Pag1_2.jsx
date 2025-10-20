@@ -7,13 +7,12 @@ const C1_Tela_02 = () => {
   const navigate = useNavigate();
 
   const handleNameSaved = (savedName) => {
-    console.log(`[Página 2] Nome salvo: ${savedName}.`);
-    navigate("/capitulo1/tela-03");
+    navigate("/capitulo1/tela-03_1");
   };
 
   return (
     <BackgroundAzul>
-      <InputModal />
+      <InputModal nextPath='/capitulo1/tela-03_1' />
     </BackgroundAzul>
   );
 };

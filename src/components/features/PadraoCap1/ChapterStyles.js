@@ -34,10 +34,10 @@ export const BalaoImagem = styled.div`
 `;
 
 export const TextoBalao = styled.p`
-  position: relative;
-  top: 18%;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 
   width: 80%;
   margin: 0;
@@ -46,7 +46,7 @@ export const TextoBalao = styled.p`
   font-size: 22px;
   font-weight: bold;
   font-family: Arial;
-  color: #333;
+  color: #000;
   line-height: 1.4;
 
   @media (max-width: 480px) {
