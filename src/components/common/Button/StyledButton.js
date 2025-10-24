@@ -22,8 +22,9 @@ export const StyledButton = styled(AntdButton)`
   &.avancar,
   &.voltar,
   &.iniciar {
-    width: 28%;
-    height: 14%;
+    width: 20vw;
+    height: 70px;
+    max-width: 350px;
 
     @media (max-width: 480px) {
       width: 90vw;

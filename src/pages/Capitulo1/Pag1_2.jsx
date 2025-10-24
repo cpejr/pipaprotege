@@ -12,7 +12,7 @@ const C1_Tela_02 = () => {
 
   return (
     <BackgroundAzul>
-      <InputModal nextPath='/capitulo1/tela-03_1' />
+      <InputModal nextPath='/capitulo1/tela-03_1' defaultOpen={true} showButton={false} />
     </BackgroundAzul>
   );
 };

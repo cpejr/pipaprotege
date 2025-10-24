@@ -13,7 +13,7 @@ import {
 } from "./StyledDesenho";
 
 const COLORS = [
-  { name: "eraser", color: "transparent", icon: true },
+  { name: "eraser", color: "white", icon: true },
   { name: "red", color: "#dc3545" },
   { name: "gold", color: "#ffc107" },
   { name: "green", color: "#28a745" },
@@ -25,6 +25,7 @@ const DesenhoComponent = ({ onSave }) => {
   const canvasRef = useRef(null);
   const [strokeColor, setStrokeColor] = useState(COLORS[5].color);
   const [isEraser, setIsEraser] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(true);
 
   const handleUndo = useCallback(() => {
     canvasRef.current?.undo();
@@ -36,17 +37,24 @@ const DesenhoComponent = ({ onSave }) => {
 
   const handleClear = useCallback(() => {
     canvasRef.current?.clearCanvas();
+    setShowInstructions(true);
   }, []);
 
   const handleColorChange = useCallback((colorName, colorHex) => {
     if (colorName === "eraser") {
       setIsEraser(true);
-      setStrokeColor("transparent");
+      setStrokeColor("white");
     } else {
       setIsEraser(false);
       setStrokeColor(colorHex);
     }
   }, []);
+
+  const handleStroke = useCallback(() => {
+    if (showInstructions) {
+      setShowInstructions(false);
+    }
+  }, [showInstructions]);
 
   const handleSave = async () => {
     if (!canvasRef.current || !onSave) return;
@@ -57,11 +65,13 @@ const DesenhoComponent = ({ onSave }) => {
 
   return (
     <CanvasContainer>
-      <Instructions>
-        FAÇA O SEU DESENHO AQUI
-        <br />
-        DEPOIS CLIQUE EM "OK" PARA SALVAR
-      </Instructions>
+      {showInstructions && (
+        <Instructions>
+          FAÇA O SEU DESENHO AQUI
+          <br />
+          DEPOIS CLIQUE EM "OK" PARA SALVAR
+        </Instructions>
+      )}
 
       <StyledSketchCanvas>
         <ReactSketchCanvas
@@ -71,8 +81,9 @@ const DesenhoComponent = ({ onSave }) => {
           strokeWidth={isEraser ? 30 : 5}
           strokeColor={strokeColor}
           eraser={isEraser}
-          canvasColor='transparent'
+          canvasColor='white'
           allowOnlyPointerType='all'
+          onStroke={handleStroke}
         />
       </StyledSketchCanvas>
 
