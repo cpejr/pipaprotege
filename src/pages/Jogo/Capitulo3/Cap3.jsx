@@ -1,5 +1,5 @@
 import { TelaInicial, StyleLink, StyleButton } from "./StyledCap3";
-
+import { Link } from "react-router-dom";
 export default function Capitulo3() {
   return (
     <TelaInicial>

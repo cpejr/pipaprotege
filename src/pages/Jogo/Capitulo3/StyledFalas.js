@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { IoShieldSharp } from "react-icons/io5";
+import { AiFillLike } from "react-icons/ai";
+
+const getProp = (prop) => (props) => props[prop] || "";
 
 export const TelaInicial = styled.div`
   height: 120vh;
@@ -11,6 +15,8 @@ export const TelaInicial = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 `;
 
 export const StyleButton = styled.button`
@@ -50,4 +56,33 @@ export const StyleLink = styled(Link)`
     width: 90%;
     height: 70px;
   }
+`;
+const DEFAULT_COLOR = "#8c52ff";
+const CLICKED_COLOR = "green";
+
+export const ShieldIcon = styled(IoShieldSharp)`
+  color: ${(props) => props.clickedcolor || DEFAULT_COLOR};
+  width: 160px;
+  height: 80px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  position: ${getProp("position")};
+  bottom: ${getProp("bottom")};
+  right: ${getProp("right")};
+  z-index: ${getProp("zIndex")};
+`;
+
+export const RightIcon = styled(AiFillLike)`
+  color: ${(props) => props.clickedcolor || DEFAULT_COLOR};
+  width: 160px;
+  width: 160px;
+  height: 80px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  position: ${getProp("position")};
+  bottom: ${getProp("bottom")};
+  right: ${getProp("right")};
+  z-index: ${getProp("zIndex")};
 `;
