@@ -31,7 +31,7 @@ const ChapterScreen = ({
       <BotaoContainer>
         {showOtherButton && onOtherButtonClick && (
           <Button type='voltar' onClick={onOtherButtonClick}>
-            Agora não
+            AGORA NÃO
           </Button>
         )}
 
