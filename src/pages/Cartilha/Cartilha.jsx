@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { CloseOutlined } from "@ant-design/icons";
 import gibiImg1 from "../../assets/gibi-1.png";
 import gibiImg2 from "../../assets/gibi-2.png";
@@ -19,8 +18,4 @@ export default function Cartilha() {
       </ImageColumn>
     </ContainerCartilha>
   );
-=======
-export default function Cartilha() {
-  return <h1>A Cartilha</h1>;
->>>>>>> main
 }
