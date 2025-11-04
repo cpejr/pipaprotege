@@ -43,7 +43,6 @@ const router = createBrowserRouter([
     element: <DeOndeVim3 />,
   },
 
-  // Capítulos (rota dinâmica)
   {
     path: "/capitulo/:numero",
     element: <Capitulo />, // Placeholder, cada capítulo vai ser resolvido depois
