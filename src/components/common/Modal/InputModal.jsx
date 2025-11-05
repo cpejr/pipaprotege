@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import CustomModal from "./CustomModal";
 import Button from "../Button/Button";
 
@@ -41,29 +42,56 @@ const FooterContainer = styled.div`
   justify-content: flex-end;
 `;
 
+const ErrorMessage = styled.p`
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+`;
+
 function InputModal({
   initialPlaceholder = 'DIGITE AQUI O SEU NOME DEPOIS CLIQUE EM "OK" PARA SALVAR',
+  nextPath,
+  backPath,
+  defaultOpen = false,
+  showButton = true,
 }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(defaultOpen);
   const [inputValue, setInputValue] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
+    if (e.target.value.trim().length > 0) {
+      setErrorMessage("");
+    }
   };
 
   const handleSave = () => {
-    console.log("Valor salvo:", inputValue);
-    alert(`O nome digitado foi: ${inputValue}`);
+    if (inputValue.trim() === "") {
+      setErrorMessage("Por favor, digite seu nome para continuar.");
+      return;
+    }
+    setErrorMessage("");
+
+    localStorage.setItem("userName", inputValue.trim());
+
     handleCloseModal();
+
+    if (nextPath) {
+      navigate(nextPath);
+    } else if (backPath) {
+      navigate(backPath);
+    }
   };
 
   return (
     <>
-      <YellowButton onClick={handleOpenModal}>InputModal</YellowButton>
-
+      {showButton && <YellowButton onClick={handleOpenModal}>InputModal</YellowButton>}
       <CustomModal
         isOpen={isModalOpen}
         footer={[
@@ -79,6 +107,7 @@ function InputModal({
           value={inputValue}
           onChange={handleInputChange}
         />
+        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
       </CustomModal>
     </>
   );

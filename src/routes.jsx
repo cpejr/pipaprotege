@@ -10,6 +10,8 @@ import DeOndeVim3 from "./pages/DeOndeVim/DeOndeVim3";
 import Intro from "./pages/Intro/Intro";
 
 import Capitulo from "./pages/Capitulos/Capitulo";
+import { capitulo1Routes } from "./Routes/routesCap1";
+import { capitulo4Routes } from "./Routes/routesCap4";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,8 @@ const router = createBrowserRouter([
     path: "/capitulo/:numero",
     element: <Capitulo />, // Placeholder, cada capítulo vai ser resolvido depois
   },
+  ...capitulo1Routes,
+  ...capitulo4Routes,
 ]);
 
 export default function Routes() {
