@@ -46,8 +46,9 @@ export const GridWrapper = styled.div`
 
 export const GridContainer = styled.div`
   display: inline-grid;
-  grid-template-columns: repeat(15, minmax(15px, 30px));
+  grid-template-columns: repeat(24, minmax(20px, 1fr));
   gap: 0;
+  width: 100%;
 `;
 
 const foundStyle = css`
@@ -73,8 +74,8 @@ export const GridCell = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
   text-transform: uppercase;
   user-select: none;
   cursor: pointer;
