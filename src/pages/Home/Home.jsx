@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <TelaInicial>
       <OrganizeButton>
-        <StyleLink to='/jogar'>
+        <StyleLink to='/capitulo1'>
           <StyleButton bgColor='#FDB92E'>JOGAR</StyleButton>
         </StyleLink>
 

@@ -59,7 +59,7 @@ const router = createBrowserRouter([
 
   {
     path: "/capitulo/:numero",
-    element: <Capitulo />, // Placeholder, cada capítulo vai ser resolvido depois
+    element: <Capitulo />, 
   },
   ...capitulo1Routes,
   ...capitulo4Routes,
