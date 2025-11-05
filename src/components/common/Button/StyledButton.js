@@ -25,7 +25,9 @@ export const StyledButton = styled(AntdButton)`
     width: 20vw;
     height: 70px;
     max-width: 350px;
-
+    &:hover {
+      transform: scale(1.05);
+    }
     @media (max-width: 480px) {
       width: 90vw;
       height: 70px;
