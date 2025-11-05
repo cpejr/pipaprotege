@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Capitulo3() {
   return (
     <TelaInicial bgImage={fundo}>
-      <Button type='avancar' margin='740px 0 0 1080px' as={Link} to='/Cap3_2'>
+      <Button type='avancar' margin='' as={Link} to='/Cap3_2'>
         AVANÇAR
       </Button>
     </TelaInicial>

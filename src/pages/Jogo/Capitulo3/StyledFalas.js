@@ -6,17 +6,12 @@ import { AiFillLike } from "react-icons/ai";
 const getProp = (prop) => (props) => props[prop] || "";
 
 export const TelaInicial = styled.div`
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  min-height: 100vh;
   background-image: ${(props) => `url(${props.bgImage})`};
   background-size: cover;
   background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: relative;
+  box-sizing: border-box;
 `;
 
 export const StyleButton = styled.button`

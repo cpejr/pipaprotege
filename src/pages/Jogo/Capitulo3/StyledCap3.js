@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import fundo from "../../../assets/capitulo3/cap3.svg";
 
 export const TelaInicial = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-image: url(${fundo});
   background-size: cover;
@@ -15,7 +15,7 @@ export const TelaInicial = styled.div`
 `;
 
 export const StyleButton = styled.button`
-  width: 82%;
+  width: 82%; 
   height: 82%;
   background-color: ${(props) => props.bgColor};
 
