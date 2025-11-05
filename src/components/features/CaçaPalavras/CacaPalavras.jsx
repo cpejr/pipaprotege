@@ -12,84 +12,18 @@ import {
   LeftControls,
 } from "./StyledCaca";
 
-function gerarPuzzle(palavras, tamanho) {
-  const grid = Array(tamanho)
-    .fill(null)
-    .map(() => Array(tamanho).fill(""));
-  const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const colocarPalavra = (palavra) => {
-    palavra = palavra.toUpperCase();
-    const direcoes = [
-      "horizontal",
-      "vertical",
-      "diagonal",
-      "horizontalInversa",
-      "verticalInversa",
-      "diagonalInversa",
-    ];
-    const direcao = direcoes[Math.floor(Math.random() * direcoes.length)];
-    let tentativas = 50;
-    while (tentativas > 0) {
-      const linha = Math.floor(Math.random() * tamanho);
-      const coluna = Math.floor(Math.random() * tamanho);
-      let cabe = true;
-      let deltaLinha = 0;
-      let deltaColuna = 0;
+const GRID_IMAGEM_COMPLETA = [
+  "AACFBALANCAKPIOLUTJLPISL".split(""),
+  "PINLYKESQUELETOUNHIJKWQI".split(""),
+  "PLOINHHHGVBNIUERWRADSFMJ".split(""),
+  "TJUINGJSZSDEWQFQUIMICAGL".split(""),
+  "UIMICROSCOPIOKFGHTYIJKIO".split(""),
+  "BIJUDFCWERFVSABCATLMNBPI".split(""),
+  "OIYHGFVAQEERRGVHIOIPJKLM".split(""),
+  " ".split(""),
+];
 
-      if (direcao === "horizontal") {
-        deltaColuna = 1;
-      } else if (direcao === "vertical") {
-        deltaLinha = 1;
-      } else if (direcao === "diagonal") {
-        deltaLinha = 1;
-        deltaColuna = 1;
-      } else if (direcao === "horizontalInversa") {
-        deltaColuna = -1;
-      } else if (direcao === "verticalInversa") {
-        deltaLinha = -1;
-      } else if (direcao === "diagonalInversa") {
-        deltaLinha = -1;
-        deltaColuna = -1;
-      }
-
-      let linhaFinal = linha + deltaLinha * (palavra.length - 1);
-      let colunaFinal = coluna + deltaColuna * (palavra.length - 1);
-
-      if (linhaFinal < 0 || linhaFinal >= tamanho || colunaFinal < 0 || colunaFinal >= tamanho) {
-        tentativas--;
-        continue;
-      }
-
-      for (let i = 0; i < palavra.length; i++) {
-        const l = linha + deltaLinha * i;
-        const c = coluna + deltaColuna * i;
-        if (grid[l][c] !== "" && grid[l][c] !== palavra[i]) {
-          cabe = false;
-          break;
-        }
-      }
-
-      if (cabe) {
-        for (let i = 0; i < palavra.length; i++) {
-          grid[linha + deltaLinha * i][coluna + deltaColuna * i] = palavra[i];
-        }
-        return;
-      }
-      tentativas--;
-    }
-  };
-
-  palavras.forEach(colocarPalavra);
-
-  for (let i = 0; i < tamanho; i++) {
-    for (let j = 0; j < tamanho; j++) {
-      if (grid[i][j] === "") {
-        grid[i][j] = letras[Math.floor(Math.random() * letras.length)];
-      }
-    }
-  }
-  return grid;
-}
+const NUM_COLUNAS = 24;
 
 const CacaPalavrasComponent = ({ onFinish }) => {
   const palavrasReais = useMemo(
@@ -97,10 +31,8 @@ const CacaPalavrasComponent = ({ onFinish }) => {
     []
   );
 
-  const TAMANHO_GRID = 15;
-
   const [palavras] = useState(palavrasReais);
-  const [grid, setGrid] = useState(() => gerarPuzzle(palavras, TAMANHO_GRID));
+  const [grid] = useState(GRID_IMAGEM_COMPLETA);
 
   const [selecionando, setSelecionando] = useState(false);
   const [celulasSelecionadas, setCelulasSelecionadas] = useState([]);
@@ -196,7 +128,7 @@ const CacaPalavrasComponent = ({ onFinish }) => {
       </InstructionsTop>
 
       <GridWrapper>
-        <GridContainer>
+        <GridContainer style={{ gridTemplateColumns: `repeat(${NUM_COLUNAS}, 1fr)` }}>
           {grid.map((linha, rowIndex) =>
             linha.map((letra, colIndex) => {
               const key = `${rowIndex}-${colIndex}`;

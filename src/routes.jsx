@@ -5,6 +5,7 @@ import Denuncia from "./pages/Denuncia/Denuncia";
 import DeOndeVim from "./pages/DeOndeVim/DeOndeVim";
 import Teste from "./pages/Teste/Teste";
 import { capitulo1Routes } from "./Routes/routesCap1";
+import { capitulo4Routes } from "./Routes/routesCap4";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
     element: <Teste />,
   },
   ...capitulo1Routes,
+  ...capitulo4Routes,
 ]);
 
 export default function Routes() {
