@@ -6,7 +6,7 @@ import InputModal from "../../components/common/Modal/InputModal";
 
 export default function Teste() {
   const text1 = "Não é legal quando alguém mostra foto ou vídeos de pessoas sem roupa para você.";
-  const text2 = "Texto aleatório";
+  const text2 = "Texto";
   return (
     <TelaInicial>
       <ModalButton content={text1} buttonText='TextoModal' />
