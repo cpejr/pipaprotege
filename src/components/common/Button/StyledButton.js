@@ -17,6 +17,7 @@ export const StyledButton = styled(AntdButton)`
   padding: 0;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   &.close,
   &.avancar,
@@ -24,12 +25,57 @@ export const StyledButton = styled(AntdButton)`
   &.iniciar {
     width: 28%;
     height: 14%;
-
     @media (max-width: 480px) {
       width: 90vw;
       height: 70px;
       font-size: 16px;
     }
+  }
+
+  /* ===== BOTÃO AVANÇAR / VOLTAR ===== */
+  &.avancar,
+  &.voltar {
+    width: 360px; /* menor que antes */
+    height: 90px; /* altura ajustada */
+    background-color: ${COLORS.yellow};
+    color: ${COLORS.text};
+    border: none;
+
+    div.yellow-wrapper {
+      background-color: ${COLORS.yellow};
+      color: ${COLORS.text};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      flex-grow: 1;
+      padding: 0 16px;
+    }
+
+    .anticon {
+      background-color: ${COLORS.purple};
+      color: ${COLORS.white};
+      width: 90px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 480px) {
+      width: 80vw;
+      height: 65px;
+      .anticon {
+        width: 60px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &.voltar {
+    flex-direction: row-reverse;
   }
 
   &.xis {
@@ -89,38 +135,6 @@ export const StyledButton = styled(AntdButton)`
         padding: 0 10px;
       }
     }
-  }
-
-  &.avancar,
-  &.voltar {
-    background-color: ${COLORS.yellow};
-    color: ${COLORS.text};
-    border: none;
-
-    div.yellow-wrapper {
-      background-color: ${COLORS.yellow};
-      color: ${COLORS.text};
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      flex-grow: 1;
-    }
-
-    .anticon {
-      background-color: ${COLORS.purple};
-      color: ${COLORS.white};
-      width: 100px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 40px;
-    }
-  }
-
-  &.voltar {
-    flex-direction: row-reverse;
   }
 
   &.ok {

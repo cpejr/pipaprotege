@@ -1,10 +1,36 @@
-import React from "react";
-import { Container, OkButton } from "./Styles";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import Button from "../../components/common/Button/Button.jsx";
+import bg14 from "../../assets/capítulo 2.14.png";
+
+const Screen = styled.div`
+  min-height: 100vh;
+  width: 100%;
+  background-color: #d0c2a9;
+  background-image: url(${bg14});
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+`;
+
+const BtnWrap = styled.div`
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+`;
 
 export default function Capitulo2_14() {
+  const navigate = useNavigate();
   return (
-    <Container bg='14'>
-      <OkButton to='/capitulo-2/15'>OK</OkButton>
-    </Container>
+    <Screen>
+      <BtnWrap>
+        <Button type='avancar' onClick={() => navigate("/capitulo2/15")}>
+          AVANÇAR
+        </Button>
+      </BtnWrap>
+    </Screen>
   );
 }
