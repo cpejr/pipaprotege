@@ -6,7 +6,10 @@ export default function Capitulo2_11() {
   return (
     <Container bg='11'>
       <ArrowButton to='/capitulo-2/12'>
-        <ArrowRightOutlined />
+        <span className='label'>AVANÇAR</span>
+        <span className='icon'>
+          <ArrowRightOutlined />
+        </span>
       </ArrowButton>
     </Container>
   );

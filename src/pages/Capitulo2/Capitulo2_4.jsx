@@ -1,13 +1,18 @@
 import React from "react";
-import { ArrowRightOutlined } from "@ant-design/icons";
-import { Container, ArrowButton } from "./Styles";
+import { Container } from "./Styles";
+import { Link } from "react-router-dom";
 
 export default function Capitulo2_4() {
   return (
     <Container bg='4'>
-      <ArrowButton to='/capitulo-2/5'>
-        <ArrowRightOutlined />
-      </ArrowButton>
+      <Link
+        to='/capitulo-2/5'
+        style={{
+          position: "absolute",
+          inset: 0,
+          display: "block",
+        }}
+      />
     </Container>
   );
 }

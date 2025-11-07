@@ -5,9 +5,12 @@ import { Container, ArrowButton } from "./Styles";
 export default function Capitulo2_6() {
   return (
     <Container bg='6'>
-      <ArrowButton to='/capitulo-2/7'>
-        <ArrowRightOutlined />
-      </ArrowButton>
+      <CornerButton to='/capitulo-2/7'>
+        <span className='label'>AVANÇAR</span>
+        <span className='icon'>
+          <ArrowRightOutlined />
+        </span>
+      </CornerButton>
     </Container>
   );
 }

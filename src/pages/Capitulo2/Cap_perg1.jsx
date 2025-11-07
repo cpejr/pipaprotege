@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Modal } from "antd";
-import { useNavigate } from "react-router-dom";
 import Button from "../../components/common/Button/Button.jsx";
 
 const Page = styled.div`
@@ -12,12 +11,10 @@ const Page = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
 const ModalBody = styled.div`
   position: relative;
   padding: 28px 28px 16px 28px;
 `;
-
 const Badge = styled.div`
   position: absolute;
   left: 18px;
@@ -37,7 +34,6 @@ const Badge = styled.div`
     color: #0a0a0a;
   }
 `;
-
 const Question = styled.p`
   margin: 0;
   text-align: center;
@@ -46,7 +42,6 @@ const Question = styled.p`
   color: #222;
   padding: 6px 36px;
 `;
-
 const StyledTextarea = styled.textarea`
   margin-top: 18px;
   padding: 18px;
@@ -68,20 +63,18 @@ const StyledTextarea = styled.textarea`
     line-height: 1.25;
   }
 `;
-
 const FooterRight = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
 `;
 
-function Cap_perg1({
-  question = "Fico na frente e sou onde você me vê,\ntenho olhos, nariz e boca, quem eu sou?",
-  initialPlaceholder = 'DIGITE AQUI A SUA RESPOSTA\nELA COMEÇA COM A LETRA "R"\nDEPOIS CLIQUE EM "OK" PARA SALVAR',
+export default function Cap_perg1({
+  question = "Responda à pergunta 1:",
+  initialPlaceholder = "DIGITE AQUI A SUA RESPOSTA E CLIQUE EM OK PARA SALVAR",
 }) {
   const [isOpen, setIsOpen] = useState(true);
   const [inputValue, setInputValue] = useState("");
-  const navigate = useNavigate();
 
   const handleSave = () => {
     const trimmed = inputValue.trim();
@@ -89,11 +82,8 @@ function Cap_perg1({
       alert("Por favor, digite uma resposta antes de salvar!");
       return;
     }
-    if (!/^r/i.test(trimmed)) {
-      alert('A resposta deve começar com a letra "R"!');
-      return;
-    }
-    navigate("/capitulo2/pergunta2");
+    alert("Resposta salva!");
+    setIsOpen(false);
   };
 
   return (
@@ -128,5 +118,3 @@ function Cap_perg1({
     </Page>
   );
 }
-
-export default Cap_perg1;
