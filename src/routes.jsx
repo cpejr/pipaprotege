@@ -1,57 +1,40 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
+
 import Home from "./pages/Home/Home";
 import Cartilha from "./pages/Cartilha/Cartilha";
 import Denuncia from "./pages/Denuncia/Denuncia";
-
 import DeOndeVim1 from "./pages/DeOndeVim/DeOndeVim1";
 import DeOndeVim2 from "./pages/DeOndeVim/DeOndeVim2";
 import DeOndeVim3 from "./pages/DeOndeVim/DeOndeVim3";
-
 import Intro from "./pages/Intro/Intro";
-
 import Capitulo from "./pages/Capitulos/Capitulo";
-import { capitulo1Routes } from "./Routes/routesCap1";
-import { capitulo4Routes } from "./Routes/routesCap4";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/cartilha",
-    element: <Cartilha />,
-  },
-  {
-    path: "/denuncia",
-    element: <Denuncia />,
-  },
+import Capitulo1RoutesJSX from "./Routes/routesCap1"; 
+import Capitulo4RoutesJSX from "./Routes/routesCap4";
 
-  {
-    path: "/intro",
-    element: <Intro />,
-  },
-
-  {
-    path: "/de-onde-vim",
-    element: <DeOndeVim1 />,
-  },
-  {
-    path: "/de-onde-vim2",
-    element: <DeOndeVim2 />,
-  },
-  {
-    path: "/de-onde-vim3",
-    element: <DeOndeVim3 />,
-  },
-
-  {
-    path: "/capitulo/:numero",
-    element: <Capitulo />, // Placeholder, cada capítulo vai ser resolvido depois
-  },
-  ...capitulo1Routes,
-  ...capitulo4Routes,
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/'>
+      <Route index element={<Home />} />
+      <Route path='cartilha' element={<Cartilha />} />
+      <Route path='denuncia' element={<Denuncia />} />
+      <Route path='intro' element={<Intro />} />
+      <Route path='de-onde-vim'>
+        <Route index element={<DeOndeVim1 />} /> 
+        <Route path='2' element={<DeOndeVim2 />} /> 
+        <Route path='3' element={<DeOndeVim3 />} /> 
+      </Route>
+      <Route path='capitulo/:numero' element={<Capitulo />} />
+      {Capitulo1RoutesJSX}
+      {Capitulo4RoutesJSX}
+    </Route>
+  )
+);
 
 export default function Routes() {
   return <RouterProvider router={router} />;
