@@ -4,6 +4,8 @@ import Cartilha from "./pages/Cartilha/Cartilha";
 import Denuncia from "./pages/Denuncia/Denuncia";
 import DeOndeVim from "./pages/DeOndeVim/DeOndeVim";
 import Teste from "./pages/Teste/Teste";
+import Intro from "./pages/Intro/Intro";
+import Capitulo2 from "./pages/Capitulo2/Capitulo2";
 import Cap_perg1 from "./pages/Capitulo2/Cap_perg1";
 import Cap_perg2 from "./pages/Capitulo2/Cap_perg2";
 import Cap_perg3 from "./pages/Capitulo2/Cap_perg3";
@@ -22,17 +24,20 @@ const router = createBrowserRouter([
   { path: "/cartilha", element: <Cartilha /> },
   { path: "/denuncia", element: <Denuncia /> },
   { path: "/de-onde-vim", element: <DeOndeVim /> },
-  { path: "/Teste", element: <Teste /> },
+  { path: "/teste", element: <Teste /> },
+  { path: "/intro", element: <Intro /> },
 
-  { path: "/capitulo2/pergunta1", element: <Cap_perg1 /> },
-  { path: "/capitulo2/pergunta2", element: <Cap_perg2 /> },
-  { path: "/capitulo2/pergunta3", element: <Cap_perg3 /> },
-  { path: "/capitulo2/pergunta4", element: <Cap_perg4 /> },
-  { path: "/capitulo2/pergunta5", element: <Cap_perg5 /> },
-  { path: "/capitulo2/pergunta6", element: <Cap_perg6 /> },
-  { path: "/capitulo2/pergunta7", element: <Cap_perg7 /> },
-  { path: "/capitulo2/pergunta8", element: <Cap_perg8 /> },
-  { path: "/capitulo2/pergunta9", element: <Cap_perg9 /> },
+  { path: "/capitulo2", element: <Capitulo2 /> },
+
+  { path: "/capitulo/1", element: <Cap_perg1 /> },
+  { path: "/capitulo/2", element: <Cap_perg2 /> },
+  { path: "/capitulo/3", element: <Cap_perg3 /> },
+  { path: "/capitulo/4", element: <Cap_perg4 /> },
+  { path: "/capitulo/5", element: <Cap_perg5 /> },
+  { path: "/capitulo/6", element: <Cap_perg6 /> },
+  { path: "/capitulo/7", element: <Cap_perg7 /> },
+  { path: "/capitulo/8", element: <Cap_perg8 /> },
+  { path: "/capitulo/9", element: <Cap_perg9 /> },
 
   { path: "/capitulo2/14", element: <Capitulo2_14 /> },
   { path: "/capitulo2/15", element: <Capitulo2_15 /> },
