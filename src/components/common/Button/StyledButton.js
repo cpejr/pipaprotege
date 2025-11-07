@@ -18,6 +18,8 @@ export const StyledButton = styled(AntdButton)`
   display: flex;
   align-items: center;
 
+  margin: ${(props) => props.margin || "0"};
+
   &.close,
   &.avancar,
   &.voltar,
