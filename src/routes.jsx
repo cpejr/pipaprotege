@@ -12,8 +12,6 @@ import Intro from "./pages/Intro/Intro";
 import Capitulo from "./pages/Capitulos/Capitulo";
 import { capitulo1Routes } from "./Routes/routesCap1";
 import { capitulo4Routes } from "./Routes/routesCap4";
-import DeOndeVim from "./pages/DeOndeVim/DeOndeVim";
-import Teste from "./pages/Teste/Teste";
 import Capitulo3 from "./pages/Capitulo3/Cap3";
 import Cap3_1 from "./pages/Capitulo3/Cap3_1";
 import Cap3_2 from "./pages/Capitulo3/Cap3_2";
