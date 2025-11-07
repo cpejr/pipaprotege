@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import fundo from "../../assets/capitulo3/cap3.svg";
+import fundo from "../../assets/capitulo3/cap3Intro.svg";
 
 export const TelaInicial = styled.div`
   height: 100vh;
@@ -13,7 +13,16 @@ export const TelaInicial = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
+export const Titulo = styled.h1`
+  position: absolute;
+  top: 0px;
+  right: 60px;
+  font-size: 5em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+`;
 export const StyleButton = styled.button`
   width: 82%;
   height: 82%;
@@ -37,7 +46,13 @@ export const StyleButton = styled.button`
     font-size: 18px;
   }
 `;
-
+export const ButtonDiv = styled.div`
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 60px;
+  z-index: 20;
+`;
 export const StyleLink = styled(Link)`
   text-decoration: none;
 

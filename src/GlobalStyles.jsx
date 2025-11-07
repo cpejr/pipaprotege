@@ -6,8 +6,11 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         min-height: 100%;
+        font-family: 'Kanit', sans-serif;
     }
-
+*{
+    font-family: 'Kanit', sans-serif;
+}
    
 `;
 

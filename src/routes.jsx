@@ -14,8 +14,9 @@ import DeOndeVim3 from "./pages/DeOndeVim/DeOndeVim3";
 import Intro from "./pages/Intro/Intro";
 import Capitulo from "./pages/Capitulos/Capitulo";
 
-import Capitulo1RoutesJSX from "./Routes/routesCap1"; 
+import Capitulo1RoutesJSX from "./Routes/routesCap1";
 import Capitulo4RoutesJSX from "./Routes/routesCap4";
+import Capitulo3RoutesJSX from "./Routes/routesCap3";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,13 +26,14 @@ const router = createBrowserRouter(
       <Route path='denuncia' element={<Denuncia />} />
       <Route path='intro' element={<Intro />} />
       <Route path='de-onde-vim'>
-        <Route index element={<DeOndeVim1 />} /> 
-        <Route path='2' element={<DeOndeVim2 />} /> 
-        <Route path='3' element={<DeOndeVim3 />} /> 
+        <Route index element={<DeOndeVim1 />} />
+        <Route path='2' element={<DeOndeVim2 />} />
+        <Route path='3' element={<DeOndeVim3 />} />
       </Route>
       <Route path='capitulo/:numero' element={<Capitulo />} />
       {Capitulo1RoutesJSX}
       {Capitulo4RoutesJSX}
+      {Capitulo3RoutesJSX}
     </Route>
   )
 );
