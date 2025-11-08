@@ -9,14 +9,19 @@ import {
   CHARACTER_IMAGES,
 } from "./PadraoProtecaoStyles.js";
 
-const ProtectionLayout = ({ text, onAdvance, characterVariant = "variant1", children }) => {
+const ProtectionLayout = ({
+  conteudoBalao,
+  onAdvance,
+  characterVariant = "variant1",
+  children,
+}) => {
   const characterImage = CHARACTER_IMAGES[characterVariant];
 
   return (
     <TelaCenarioProtecao>
-      {text && (
+      {conteudoBalao && (
         <BalaoImagemProtecao>
-          <TextoBalaoProtecao>{text}</TextoBalaoProtecao>
+          <TextoBalaoProtecao>{conteudoBalao}</TextoBalaoProtecao>
         </BalaoImagemProtecao>
       )}
 

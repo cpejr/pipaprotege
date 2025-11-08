@@ -18,7 +18,7 @@ const StyledImage = styled.img`
   flex-shrink: 0;
 
   &.semaforo {
-    width: 120px;
+    width: 150px;
     height: auto;
     margin-top: -10px;
   }
@@ -53,6 +53,7 @@ const StyledImage = styled.img`
 const InstructionBlock = styled.div`
   line-height: 1.4;
   font-size: 20px;
+  font-weight: bold;
 
   & p {
     margin: 5px 0 15px 0;
@@ -71,10 +72,11 @@ const LightHeader = styled.h4`
 const PataInstructionText = styled.p`
   margin: 15px 0;
   display: flex;
-  align-items: center;
-  font-weight: normal;
+  align-items: flex-start;
+  font-weight: bold;
   font-size: 22px;
   line-height: 1.3;
+  min-height: 100px;
 
   & strong {
     font-weight: bold;
@@ -85,7 +87,8 @@ const PataInstructionText = styled.p`
 const ContentQuadroRoxo = styled.div`
   text-align: center;
   padding-top: 10px;
-  font-size: 18px;
+  font-size: 22px;
+  min-height: 100px;
   font-weight: bold;
   line-height: 1.5;
 `;
@@ -119,14 +122,23 @@ const QuadroConteudoPista = ({ variant, ...rest }) => {
     innerContent = (
       <>
         <PataInstructionText>
-          <StyledImage className='pata' src={PataRoxa} /> Se for um toque de confiança, siga em
-          frente
+          <StyledImage className='pata' src={PataRoxa} />{" "}
+          <span>
+            {" "}
+            Se for um <strong style={{ fontWeight: 900 }}> toque de confiança</strong>, siga em
+            frente
+          </span>
         </PataInstructionText>
         <PataInstructionText>
-          <StyledImage className='pata' src={PataRoxa} /> Se for um toque de desconfiança, desvie.
+          <StyledImage className='pata' src={PataRoxa} />
+          <span>
+            {" "}
+            Se for um <strong style={{ fontWeight: 900 }}> toque de desconfiança</strong>, desvie.
+          </span>
         </PataInstructionText>
         <ContentQuadroRoxo>
-          Use o semáforo como uma Pista de Proteção para se manter seguro!
+          Use o semáforo como uma <strong style={{ fontWeight: 900 }}> Pista de Proteção</strong>{" "}
+          para se manter seguro!
         </ContentQuadroRoxo>
       </>
     );
@@ -138,8 +150,9 @@ const QuadroConteudoPista = ({ variant, ...rest }) => {
         <InstructionBlock>
           <LightHeader $color='red'>Luz Vermelha</LightHeader>
           <p>
-            Toque que faz você se sentir estranho ou com medo. Diga "não" e peça ajuda para um
-            adulto em quem você confia.
+            Toque que faz você se sentir estranho ou com medo. Diga{" "}
+            <strong style={{ fontWeight: 900 }}>"não"</strong> e peça ajuda para um adulto em quem
+            você confia.
           </p>
 
           <LightHeader $color='#f5bd58'>Luz Amarela</LightHeader>
@@ -156,7 +169,7 @@ const QuadroConteudoPista = ({ variant, ...rest }) => {
   } else if (variant === "placa") {
     quadroProps.style.textAlign = "center";
     quadroProps.style.padding = "40px";
-    quadroProps.style.minHeight = "400px";
+    quadroProps.style.minHeight = "200px";
 
     innerContent = (
       <>

@@ -8,9 +8,12 @@ const C4_Tela_02 = () => {
     navigate("/capitulo4/tela-03");
   };
 
-  const contentText =
-    "O toque de confiança é de quem você conhece e confia. Esse toque faz você se sentir seguro e protegido!";
-
+  const contentText = (
+    <>
+      O <strong style={{ fontWeight: "black" }}>toque de confiança</strong> é de quem você conhece e
+      confia. Esse toque faz você se sentir seguro e protegido!
+    </>
+  );
   return <ChapterScreen text={contentText} onAdvance={handleAdvance} characterVariant='variant1' />;
 };
 

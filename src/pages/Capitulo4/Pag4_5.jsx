@@ -9,10 +9,10 @@ const C4_Tela_05 = () => {
     navigate("/capitulo4/tela-06");
   };
 
-  const mySpeechBubble = <p>Você vai encontrar alguns desafios!</p>;
+  const conteudoBalao = <p>Você vai encontrar alguns desafios!</p>;
 
   return (
-    <ProtectionScreen speechBubbleContent={mySpeechBubble} onAdvance={handleAdvance}>
+    <ProtectionScreen conteudoBalao={conteudoBalao} onAdvance={handleAdvance}>
       <QuadroConteudo variant='pata' />
     </ProtectionScreen>
   );

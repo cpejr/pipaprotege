@@ -22,18 +22,10 @@ export const BalaoImagemProtecao = styled.div`
   left: 20%;
   width: 400px;
   height: 300px;
-  z-index: 15;
 
   background-image: url(${Balao_De_Fala});
   background-size: contain;
   background-repeat: no-repeat;
-
-  @media (max-width: 768px) {
-    top: 35%;
-    left: 5%;
-    width: 60%;
-    height: 200px;
-  }
 `;
 
 export const TextoBalaoProtecao = styled.p`
@@ -49,10 +41,6 @@ export const TextoBalaoProtecao = styled.p`
   font-family: Arial;
   color: #000;
   line-height: 1.4;
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
 `;
 
 export const CachorroOverlayProtecao = styled.img`
@@ -61,12 +49,6 @@ export const CachorroOverlayProtecao = styled.img`
   left: 5%;
   height: 60%;
   object-fit: contain;
-  z-index: 10;
-
-  @media (max-width: 768px) {
-    left: 0;
-    height: 40%;
-  }
 `;
 
 export const BotaoContainerProtecao = styled.div`
@@ -75,32 +57,17 @@ export const BotaoContainerProtecao = styled.div`
   right: 20px;
   display: flex;
   gap: 60px;
-  z-index: 20;
 `;
 
 export const QuadroRoxoSlot = styled.div`
   position: absolute;
-  top: 50%;
-  right: 20%;
+  top: 45%;
+  right: 14%;
   transform: translateY(-50%);
-  z-index: 15;
 
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
-
-  @media (max-width: 770px) {
-    top: 60%;
-    right: auto;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    max-width: none;
-  }
-
-  @media (max-width: 480px) {
-    top: 65%;
-  }
 `;
