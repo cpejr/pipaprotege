@@ -1,7 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Escola from "../../../assets/Capitulo1Img/Escola.png";
 import BalaoEsquerdo from "../../../assets/Capitulo9Img/BalaoEsquerdo.png";
 import Balao_De_Fala from "../../../assets/Capitulo1Img/Balao_De_Fala.png";
+import CortinaLateral from "../../../assets/Capitulo9Img/CortinaLateral.png";
+import CortinaInteira from "../../../assets/Capitulo9Img/CortinaInteira.png";
+import CortinaFinal from "../../../assets/Capitulo9Img/CortinaFinal.png";
 
 import EmPe1 from "../../../assets/Capitulo1Img/Cachorro/EmPe1.png";
 import EmPe2 from "../../../assets/Capitulo1Img/Cachorro/EmPe2.png";
@@ -78,5 +81,58 @@ export const BotaoContainer = styled.div`
   right: 20px;
   display: flex;
   gap: 60px;
-  z-index: 20;
+`;
+
+export const BotoesEscolhaContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 10%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+
+export const CenaEncerramento = styled.div`
+  height: 100vh;
+  width: 100vw;
+  background-position: center bottom;
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+
+  ${(props) => {
+    switch (props.$variant) {
+      case "1":
+        return css`
+          background-image: url(${CortinaLateral});
+        `;
+      case "2":
+        return css`
+          background-image: url(${CortinaInteira});
+          background-position: center center;
+        `;
+      case "3":
+        return css`
+          background-image: url(${CortinaFinal});
+          background-position: center center;
+        `;
+      default:
+        return css`
+          background-image: url(${Escola});
+        `;
+    }
+  }}
+`;
+
+export const TextoFIM = styled.h1`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: 900;
+  color: #f5bd58;
+  text-shadow: 4px 4px 0px #8b4513;
+  z-index: 10;
 `;

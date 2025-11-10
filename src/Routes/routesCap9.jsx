@@ -10,6 +10,11 @@ import C9_Tela_07 from "../pages/Capitulo9/Pag9_7";
 import C9_Tela_08 from "../pages/Capitulo9/Pag9_8";
 import C9_Tela_09 from "../pages/Capitulo9/Pag9_9";
 import C9_Tela_10 from "../pages/Capitulo9/Pag9_10";
+import C9_Tela_11_1 from "../pages/Capitulo9/Pag9_11_1";
+import C9_Tela_11_2 from "../pages/Capitulo9/Pag9_11_2";
+import C9_Tela_12 from "../pages/Capitulo9/Pag9_12";
+import C9_Tela_13 from "../pages/Capitulo9/Pag9_13";
+import C9_Tela_14 from "../pages/Capitulo9/Pag9_14";
 
 const Capitulo9RoutesJSX = (
   <Route path='capitulo9'>
@@ -24,6 +29,11 @@ const Capitulo9RoutesJSX = (
     <Route path='tela-08' element={<C9_Tela_08 />} />
     <Route path='tela-09' element={<C9_Tela_09 />} />
     <Route path='tela-10' element={<C9_Tela_10 />} />
+    <Route path='tela-11_1' element={<C9_Tela_11_1 />} />
+    <Route path='tela-11_2' element={<C9_Tela_11_2 />} />
+    <Route path='tela-12' element={<C9_Tela_12 />} />
+    <Route path='tela-13' element={<C9_Tela_13 />} />
+    <Route path='tela-14' element={<C9_Tela_14 />} />
   </Route>
 );
 
