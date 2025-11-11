@@ -5,7 +5,7 @@ const C1_Tela_11 = () => {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("");
+    navigate("/intro");
   };
 
   const contentText = "Parabéns, você conseguiu! Agora podemos ir, certo?";
