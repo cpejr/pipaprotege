@@ -1,107 +1,44 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
+
 import Home from "./pages/Home/Home";
 import Cartilha from "./pages/Cartilha/Cartilha";
 import Denuncia from "./pages/Denuncia/Denuncia";
-
 import DeOndeVim1 from "./pages/DeOndeVim/DeOndeVim1";
 import DeOndeVim2 from "./pages/DeOndeVim/DeOndeVim2";
 import DeOndeVim3 from "./pages/DeOndeVim/DeOndeVim3";
-
 import Intro from "./pages/Intro/Intro";
-
 import Capitulo from "./pages/Capitulos/Capitulo";
-import { capitulo1Routes } from "./Routes/routesCap1";
-import { capitulo4Routes } from "./Routes/routesCap4";
-import Capitulo3 from "./pages/Capitulo3/Cap3";
-import Cap3_1 from "./pages/Capitulo3/Cap3_1";
-import Cap3_2 from "./pages/Capitulo3/Cap3_2";
-import Cap3_3 from "./pages/Capitulo3/Cap3_3";
-import Cap3_4 from "./pages/Capitulo3/Cap3_4";
-import Cap3_5 from "./pages/Capitulo3/Cap3_5";
-import Cap3_6 from "./pages/Capitulo3/Cap3_6";
-import Cap3_7 from "./pages/Capitulo3/Cap3_7";
-import Cap3_8 from "./pages/Capitulo3/Cap3_8";
-import Cap3_9 from "./pages/Capitulo3/Cap3_9";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/cartilha",
-    element: <Cartilha />,
-  },
-  {
-    path: "/denuncia",
-    element: <Denuncia />,
-  },
+import Capitulo1RoutesJSX from "./Routes/routesCap1";
+import Capitulo4RoutesJSX from "./Routes/routesCap4";
+import Capitulo3RoutesJSX from "./Routes/routesCap3";
+import Capitulo9RoutesJSX from "./Routes/routesCap9";
 
-  {
-    path: "/intro",
-    element: <Intro />,
-  },
-
-  {
-    path: "/de-onde-vim",
-    element: <DeOndeVim1 />,
-  },
-  {
-    path: "/de-onde-vim2",
-    element: <DeOndeVim2 />,
-  },
-  {
-    path: "/de-onde-vim3",
-    element: <DeOndeVim3 />,
-  },
-
-  {
-    path: "/capitulo/:numero",
-    element: <Capitulo />, 
-  },
-  ...capitulo1Routes,
-  ...capitulo4Routes,
-  {
-    path: "/Capitulo3",
-    element: <Capitulo3 />,
-  },
-  {
-    path: "/Cap3_1",
-    element: <Cap3_1 />,
-  },
-  {
-    path: "/Cap3_2",
-    element: <Cap3_2 />,
-  },
-  {
-    path: "/Cap3_3",
-    element: <Cap3_3 />,
-  },
-  {
-    path: "/Cap3_4",
-    element: <Cap3_4 />,
-  },
-  {
-    path: "/Cap3_5",
-    element: <Cap3_5 />,
-  },
-  {
-    path: "/Cap3_6",
-    element: <Cap3_6 />,
-  },
-  {
-    path: "/Cap3_7",
-    element: <Cap3_7 />,
-  },
-  {
-    path: "/Cap3_8",
-    element: <Cap3_8 />,
-  },
-  {
-    path: "/Cap3_9",
-    element: <Cap3_9 />,
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/'>
+      <Route index element={<Home />} />
+      <Route path='cartilha' element={<Cartilha />} />
+      <Route path='denuncia' element={<Denuncia />} />
+      <Route path='intro' element={<Intro />} />
+      <Route path='de-onde-vim'>
+        <Route index element={<DeOndeVim1 />} />
+        <Route path='2' element={<DeOndeVim2 />} />
+        <Route path='3' element={<DeOndeVim3 />} />
+      </Route>
+      <Route path='capitulo/:numero' element={<Capitulo />} />
+      {Capitulo1RoutesJSX}
+      {Capitulo3RoutesJSX}
+      {Capitulo4RoutesJSX}
+      {Capitulo9RoutesJSX}
+    </Route>
+  )
+);
 
 export default function Routes() {
   return <RouterProvider router={router} />;

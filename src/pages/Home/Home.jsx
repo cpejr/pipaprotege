@@ -1,27 +1,45 @@
 import { TelaInicial, StyleButton, OrganizeButton, StyleLink } from "./Styles";
-
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <TelaInicial>
       <OrganizeButton>
-        <StyleLink to='/capitulo1'>
-          <StyleButton bgColor='#FDB92E'>JOGAR</StyleButton>
+        <StyleLink>
+          <StyleButton bgColor='#FDB92E' onClick={() => navigate("/intro")}>
+            JOGAR
+          </StyleButton>
         </StyleLink>
 
-        <StyleLink to='/cartilha'>
-          <StyleButton bgColor='#A367F7' borderColor='white' color='white'>
+        <StyleLink>
+          <StyleButton
+            bgColor='#A367F7'
+            onClick={() => navigate("/cartilha")}
+            borderColor='white'
+            color='white'
+          >
             CARTILHA
           </StyleButton>
         </StyleLink>
 
-        <StyleLink to='/denuncia'>
-          <StyleButton bgColor='#A367F7' borderColor='white' color='white'>
+        <StyleLink>
+          <StyleButton
+            bgColor='#A367F7'
+            borderColor='white'
+            color='white '
+            onClick={() => navigate("/denuncia")}
+          >
             DENÚNCIA
           </StyleButton>
         </StyleLink>
 
-        <StyleLink to='/de-onde-vim'>
-          <StyleButton bgColor='#A367F7' borderColor='white' color='white'>
+        <StyleLink>
+          <StyleButton
+            bgColor='#A367F7'
+            borderColor='white'
+            color='white'
+            onClick={() => navigate("/de-onde-vim")}
+          >
             DE ONDE VIM?
           </StyleButton>
         </StyleLink>

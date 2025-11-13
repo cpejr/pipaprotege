@@ -2,16 +2,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { IoShieldSharp } from "react-icons/io5";
 import { AiFillLike } from "react-icons/ai";
-import pipa from "../../assets/capitulo3/imagesPage/pipaTeste1.svg";
-
-const getProp = (prop) => (props) => props[prop] || "";
 
 export const TelaInicial = styled.div`
   width: 100%;
   min-height: 100vh;
   background-image: ${(props) => `url(${props.bgImage})`};
   background-size: cover;
-  background-position: center;
+  background-position: center 60%;
   box-sizing: border-box;
   background-color: ${(props) => props.bgColor || "#D1BED1"};
 `;
@@ -28,13 +25,6 @@ export const RightDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  & > img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
 `;
 export const Container = styled.div`
   width: 100%;
@@ -65,7 +55,9 @@ export const DivShield = styled.div`
   flex-direction: row;
   align-items: center;
 `;
-
+export const Image = styled.img`
+  padding-bottom: 25%;
+`;
 export const ButtonDiv = styled.div`
   position: absolute;
   bottom: 20px;

@@ -1,17 +1,17 @@
-import { TelaInicial, StyleLink, StyleButton, ButtonDiv } from "./StyledFalas";
-import fundo from "../../assets/capitulo3/cap33.svg";
+import { TelaInicial, StyleLink, ButtonDiv, Titulo } from "./StyledCap3";
 import Button from "../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
-export default function Capitulo3() {
+export default function C3_Introducao() {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("/Cap3_4");
+    navigate("/capitulo3/tela-01");
   };
   return (
-    <TelaInicial bgImage={fundo}>
+    <TelaInicial>
+      <Titulo>CAPÍTULO 3</Titulo>
       <ButtonDiv>
-        <Button type='avancar' onClick={handleAdvance}>
+        <Button type='iniciar' onClick={handleAdvance}>
           AVANÇAR
         </Button>
       </ButtonDiv>
