@@ -73,7 +73,7 @@ function InputModal({
 
   const handleSave = () => {
     if (inputValue.trim() === "") {
-      setErrorMessage("Por favor, digite seu nome para continuar.");
+      setErrorMessage("Por favor, digite o nome para continuar.");
       return;
     }
     setErrorMessage("");

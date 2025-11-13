@@ -17,7 +17,14 @@ const ModalImage = styled.img`
 
 const CustomModal = ({ children, isOpen, imageUrl, footer }) => {
   return (
-    <Modal open={isOpen} footer={footer} title={null} closeIcon={false}>
+    <Modal
+      open={isOpen}
+      footer={footer}
+      title={null}
+      closeIcon={false}
+      mask={false}
+      style={{ top: 200 }}
+    >
       <ModalContent>
         {imageUrl && <ModalImage src={imageUrl} alt='Modal Visual' />}
         {children}
