@@ -27,7 +27,7 @@ const StyledTextarea = styled.textarea`
   font-size: 16px;
   text-align: center;
   color: #888;
-  height: 180px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +55,8 @@ function InputModal({
   backPath,
   defaultOpen = false,
   showButton = true,
+  isBottomPositioned = false,
+  correctAnswer,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(defaultOpen);
   const [inputValue, setInputValue] = useState("");
@@ -72,13 +74,26 @@ function InputModal({
   };
 
   const handleSave = () => {
-    if (inputValue.trim() === "") {
-      setErrorMessage("Por favor, digite o nome para continuar.");
+    const trimmedInput = inputValue.trim();
+
+    if (trimmedInput === "") {
+      setErrorMessage("Por favor, digite a resposta para continuar.");
       return;
     }
     setErrorMessage("");
 
-    localStorage.setItem("userName", inputValue.trim());
+    if (correctAnswer) {
+      const normalize = (str) =>
+        str
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+
+      if (normalize(trimmedInput) !== normalize(correctAnswer)) {
+        setErrorMessage("Resposta incorreta. Tente novamente!");
+        return;
+      }
+    }
 
     handleCloseModal();
 
@@ -94,6 +109,7 @@ function InputModal({
       {showButton && <YellowButton onClick={handleOpenModal}>InputModal</YellowButton>}
       <CustomModal
         isOpen={isModalOpen}
+        isBottomPositioned={isBottomPositioned}
         footer={[
           <FooterContainer key='footer-container'>
             <Button onClick={handleSave} type='ok' key='ok'>
