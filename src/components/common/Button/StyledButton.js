@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Button as AntdButton } from "antd";
 
 export const COLORS = {
@@ -7,6 +7,56 @@ export const COLORS = {
   yellow: "#F5BD58",
   white: "#FFFFFF",
 };
+
+const monochromaticStyles = css`
+  &.avancar,
+  &.voltar {
+    background-color: #171817;
+    color: ${COLORS.white};
+    border: 3px solid ${COLORS.white};
+
+    div.yellow-wrapper {
+      background-color: #171817;
+      color: ${COLORS.white};
+      padding: 0 10px;
+    }
+
+    .anticon {
+      background-color: #171817;
+      color: ${COLORS.white};
+      border: 3px solid ${COLORS.white};
+      width: 100px;
+      height: 100%;
+    }
+  }
+  &.avancar:hover,
+  &.avancar:focus,
+  &.avancar:active,
+  &.voltar:hover,
+  &.voltar:focus,
+  &.voltar:active {
+    background-color: #171817 !important;
+    color: ${COLORS.white} !important;
+    border: 3px solid ${COLORS.white} !important;
+
+    div.yellow-wrapper {
+      background-color: #171817 !important;
+      color: ${COLORS.white} !important;
+    }
+
+    .anticon {
+      background-color: ${COLORS.white} !important;
+      color: #171817 !important;
+      border: 3px solid ${COLORS.white} !important;
+    }
+
+    &.voltar:hover,
+    &.voltar:focus,
+    &.voltar:active {
+      flex-direction: row-reverse !important;
+    }
+  }
+`;
 
 export const StyledButton = styled(AntdButton)`
   font-family: Arial;
@@ -214,4 +264,6 @@ export const StyledButton = styled(AntdButton)`
     color: ${COLORS.white} !important;
     border: 4px solid ${COLORS.white} !important;
   }
+
+  ${(props) => props.monochromatic && monochromaticStyles}
 `;

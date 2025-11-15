@@ -14,6 +14,13 @@ import C8_Tela_10 from "../pages/Capitulo8/Pag8_10";
 import C8_Tela_11 from "../pages/Capitulo8/Pag8_11";
 import C8_Tela_12 from "../pages/Capitulo8/Pag8_12";
 import C8_Tela_13 from "../pages/Capitulo8/Pag8_13";
+import C8_Tela_14 from "../pages/Capitulo8/Pag8_14";
+import C8_Tela_15 from "../pages/Capitulo8/Pag8_15";
+import C8_Tela_16 from "../pages/Capitulo8/Pag8_16";
+import C8_Tela_17 from "../pages/Capitulo8/Pag8_17";
+import C8_Tela_18 from "../pages/Capitulo8/Pag8_18";
+import C8_Tela_19 from "../pages/Capitulo8/Pag8_19";
+import C8_Tela_20 from "../pages/Capitulo8/Pag8_20";
 
 const Capitulo8RoutesJSX = (
   <Route path='capitulo8'>
@@ -31,6 +38,13 @@ const Capitulo8RoutesJSX = (
     <Route path='tela-11' element={<C8_Tela_11 />} />
     <Route path='tela-12' element={<C8_Tela_12 />} />
     <Route path='tela-13' element={<C8_Tela_13 />} />
+    <Route path='tela-14' element={<C8_Tela_14 />} />
+    <Route path='tela-15' element={<C8_Tela_15 />} />
+    <Route path='tela-16' element={<C8_Tela_16 />} />
+    <Route path='tela-17' element={<C8_Tela_17 />} />
+    <Route path='tela-18' element={<C8_Tela_18 />} />
+    <Route path='tela-19' element={<C8_Tela_19 />} />
+    <Route path='tela-20' element={<C8_Tela_20 />} />
   </Route>
 );
 
