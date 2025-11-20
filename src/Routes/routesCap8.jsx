@@ -21,6 +21,7 @@ import C8_Tela_17 from "../pages/Capitulo8/Pag8_17";
 import C8_Tela_18 from "../pages/Capitulo8/Pag8_18";
 import C8_Tela_19 from "../pages/Capitulo8/Pag8_19";
 import C8_Tela_20 from "../pages/Capitulo8/Pag8_20";
+import C8_Tela_21 from "../pages/Capitulo8/Pag8_21";
 
 const Capitulo8RoutesJSX = (
   <Route path='capitulo8'>
@@ -45,6 +46,7 @@ const Capitulo8RoutesJSX = (
     <Route path='tela-18' element={<C8_Tela_18 />} />
     <Route path='tela-19' element={<C8_Tela_19 />} />
     <Route path='tela-20' element={<C8_Tela_20 />} />
+    <Route path='tela-21' element={<C8_Tela_21 />} />
   </Route>
 );
 

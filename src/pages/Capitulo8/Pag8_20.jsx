@@ -5,13 +5,13 @@ const C8_Tela_20 = () => {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("/capitulo8/tela-22");
+    navigate("/capitulo8/tela-21");
   };
 
   const textoEsquerda = (
     <>
       Atenção! Sabe quando o coração bate forte de medo? Isso pode acontecer se alguém pedir para
-      ver você <strong>sem roupa</strong> ou tocar suas <strong>partes intímas</strong>.
+      ver você <strong>sem roupa</strong> ou tocar suas <strong>partes íntimas</strong>.
     </>
   );
 
