@@ -9,6 +9,7 @@ import {
   LightButton,
   DecisaoTexto,
   OverlayMessage,
+  SemaforoComponente,
 } from "./TelaQuizStyled.js";
 
 const QuizScreen = ({ pageNumber, contextText, correctColor, pistaText, onAdvance, ...rest }) => {
@@ -41,6 +42,7 @@ const QuizScreen = ({ pageNumber, contextText, correctColor, pistaText, onAdvanc
 
   return (
     <QuizContainer {...rest}>
+      <SemaforoComponente />
       <PlacaNumero>{pageNumber}</PlacaNumero>
 
       <ContextoTexto>{contextText}</ContextoTexto>

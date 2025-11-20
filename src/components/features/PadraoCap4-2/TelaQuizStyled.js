@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 import QuizBackground from "../../../assets/Capitulo4Img/QuizBackground.png";
 import SinalLaranja from "../../../assets/Capitulo4Img/SinalLaranja.png";
+import SinalAmarelo from "../../../assets/Capitulo4Img/SinalAmarelo.png";
+import Semaforo from "../../../assets/Capitulo4Img/Semaforo.png";
 
 const COLORS = {
   red: "#ff0000",
@@ -20,15 +22,32 @@ export const QuizContainer = styled.div`
   color: ${COLORS.text};
 `;
 
+export const SemaforoComponente = styled.div`
+  position: absolute;
+  top: 40vh;
+  left: 3%;
+  width: 150px;
+  height: 60vh;
+  background-image: url(${Semaforo});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  pointer-events: none;
+`;
+
 export const PlacaNumero = styled.div`
   position: absolute;
-  top: 15%;
-  left: 5%;
+  top: 10vh;
+  left: 3%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  background-image: url(${SinalAmarelo});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 170px;
+  height: 170px;
   font-size: 80px;
   font-weight: bold;
 `;
@@ -46,33 +65,30 @@ export const ContextoTexto = styled.p`
 `;
 
 export const LightButton = styled.button`
-  width: 97px;
-  height: 97px;
+  width: 88px;
+  height: 88px;
   border-radius: 80%;
   border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
   position: absolute;
-  z-index: 10;
   transition: border-color 0.2s;
+  left: 5%;
 
   ${(props) =>
     props.$color === "red" &&
     css`
-      top: 47%;
-      left: 5%;
+      top: 42vh;
     `}
   ${(props) =>
     props.$color === "yellow" &&
     css`
-      top: 65%;
-      left: 5%;
+      top: 56vh;
     `}
     ${(props) =>
     props.$color === "green" &&
     css`
-      top: 82%;
-      left: 5%;
+      top: 70vh;
     `}
 `;
 
@@ -87,17 +103,17 @@ export const DecisaoTexto = styled.p`
   ${(props) =>
     props.$variant === "red" &&
     css`
-      top: 45%;
+      top: 45vh;
     `}
   ${(props) =>
     props.$variant === "yellow" &&
     css`
-      top: 63%;
+      top: 63vh;
     `}
   ${(props) =>
     props.$variant === "green" &&
     css`
-      top: 81%;
+      top: 81vh;
     `}
 `;
 
