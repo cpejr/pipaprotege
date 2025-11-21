@@ -214,4 +214,20 @@ export const StyledButton = styled(AntdButton)`
     color: ${COLORS.white} !important;
     border: 4px solid ${COLORS.white} !important;
   }
+
+  &.amarelo {
+    background-color: ${COLORS.yellow};
+    color: ${COLORS.text};
+    border: 3px solid black;
+    width: 260px;
+    height: 80px;
+    border-radius: 0;
+    justify-content: center;
+    font-size: 28px;
+    transition: transform 0.15s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 `;

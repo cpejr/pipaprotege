@@ -18,6 +18,7 @@ import Capitulo1RoutesJSX from "./Routes/routesCap1";
 import Capitulo4RoutesJSX from "./Routes/routesCap4";
 import Capitulo3RoutesJSX from "./Routes/routesCap3";
 import Capitulo5RoutesJSX from "./Routes/routesCap5";
+import Capitulo6RoutesJSX from "./Routes/routesCap6";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
       {Capitulo4RoutesJSX}
       {Capitulo3RoutesJSX}
       {Capitulo5RoutesJSX}
+      {Capitulo6RoutesJSX}
     </Route>
   )
 );

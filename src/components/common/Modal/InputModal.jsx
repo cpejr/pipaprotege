@@ -58,6 +58,7 @@ function InputModal({
   isBottomPositioned = false,
   correctAnswer,
   onOk,
+  width,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(defaultOpen);
   const [inputValue, setInputValue] = useState("");
@@ -123,6 +124,7 @@ function InputModal({
             </Button>
           </FooterContainer>,
         ]}
+        width={width}
       >
         <StyledTextarea
           placeholder={initialPlaceholder}
