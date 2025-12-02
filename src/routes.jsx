@@ -15,6 +15,7 @@ import Intro from "./pages/Intro/Intro";
 import Capitulo from "./pages/Capitulos/Capitulo";
 
 import Capitulo1RoutesJSX from "./Routes/routesCap1";
+import Capitulo2RoutesJSX from "./Routes/routesCap2";
 import Capitulo4RoutesJSX from "./Routes/routesCap4";
 import Capitulo3RoutesJSX from "./Routes/routesCap3";
 import Capitulo9RoutesJSX from "./Routes/routesCap9";
@@ -33,6 +34,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path='capitulo/:numero' element={<Capitulo />} />
       {Capitulo1RoutesJSX}
+      {Capitulo2RoutesJSX}
       {Capitulo3RoutesJSX}
       {Capitulo4RoutesJSX}
       {Capitulo9RoutesJSX}
