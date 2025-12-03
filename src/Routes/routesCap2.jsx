@@ -12,6 +12,15 @@ import C2_Tela_10 from "../pages/Capitulo2/Pag2_10";
 import C2_Tela_11 from "../pages/Capitulo2/Pag2_11";
 import C2_Tela_12 from "../pages/Capitulo2/Pag2_12";
 import C2_Tela_13 from "../pages/Capitulo2/Pag2_13";
+import C2_Tela_14 from "../pages/Capitulo2/Pag2_14";
+import C2_Tela_15 from "../pages/Capitulo2/Pag2_15";
+import C2_Tela_16 from "../pages/Capitulo2/Pag2_16";
+import C2_Tela_17 from "../pages/Capitulo2/Pag2_17";
+import C2_Tela_18 from "../pages/Capitulo2/Pag2_18";
+import C2_Tela_19 from "../pages/Capitulo2/Pag2_19";
+import C2_Tela_20 from "../pages/Capitulo2/Pag2_20";
+import C2_Tela_21 from "../pages/Capitulo2/Pag2_21";
+import C2_Tela_22 from "../pages/Capitulo2/Pag2_22";
 import C2_Tela_23 from "../pages/Capitulo2/Pag2_23";
 import C2_Tela_24 from "../pages/Capitulo2/Pag2_24";
 import C2_Tela_25 from "../pages/Capitulo2/Pag2_25";
@@ -31,6 +40,15 @@ const Capitulo2RoutesJSX = (
     <Route path='tela-11' element={<C2_Tela_11 />} />
     <Route path='tela-12' element={<C2_Tela_12 />} />
     <Route path='tela-13' element={<C2_Tela_13 />} />
+    <Route path='tela-14' element={<C2_Tela_14 />} />
+    <Route path='tela-15' element={<C2_Tela_15 />} />
+    <Route path='tela-16' element={<C2_Tela_16 />} />
+    <Route path='tela-17' element={<C2_Tela_17 />} />
+    <Route path='tela-18' element={<C2_Tela_18 />} />
+    <Route path='tela-19' element={<C2_Tela_19 />} />
+    <Route path='tela-20' element={<C2_Tela_20 />} />
+    <Route path='tela-21' element={<C2_Tela_21 />} />
+    <Route path='tela-22' element={<C2_Tela_22 />} />
     <Route path='tela-23' element={<C2_Tela_23 />} />
     <Route path='tela-24' element={<C2_Tela_24 />} />
     <Route path='tela-25' element={<C2_Tela_25 />} />

@@ -21,9 +21,6 @@ const BotaoEsqueleto = styled.div`
   width: 18%;
   height: 85%;
   cursor: pointer;
-
-  border: 1px solid red;
-  background-color: rgba(255, 0, 0, 0.1);
 `;
 
 const C9_Tela_04 = () => {
