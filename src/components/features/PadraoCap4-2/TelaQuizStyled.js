@@ -54,7 +54,7 @@ export const PlacaNumero = styled.div`
 
 export const ContextoTexto = styled.p`
   position: absolute;
-  top: 6%;
+  top: 8%;
   left: 20%;
   width: 70%;
 
@@ -95,7 +95,7 @@ export const LightButton = styled.button`
 export const DecisaoTexto = styled.p`
   position: absolute;
   font-size: 30px;
-  left: 20%;
+  left: 13%;
   width: 75%;
   line-height: 2;
   font-weight: medium;
@@ -103,17 +103,17 @@ export const DecisaoTexto = styled.p`
   ${(props) =>
     props.$variant === "red" &&
     css`
-      top: 45vh;
+      top: 40vh;
     `}
   ${(props) =>
     props.$variant === "yellow" &&
     css`
-      top: 63vh;
+      top: 53vh;
     `}
   ${(props) =>
     props.$variant === "green" &&
     css`
-      top: 81vh;
+      top: 65vh;
     `}
 `;
 
