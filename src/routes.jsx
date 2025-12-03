@@ -33,8 +33,8 @@ const router = createBrowserRouter(
       </Route>
       <Route path='capitulo/:numero' element={<Capitulo />} />
       {Capitulo1RoutesJSX}
-      {Capitulo4RoutesJSX}
       {Capitulo3RoutesJSX}
+      {Capitulo4RoutesJSX}
       {Capitulo9RoutesJSX}
     </Route>
   )
