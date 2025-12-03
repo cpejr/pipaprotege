@@ -141,7 +141,6 @@ export const QuadroMensagem = styled.div`
   width: 30%;
   max-height: 70%;
   padding: 2.5%;
-
   background-color: white;
   border: 5px solid #6caf5c;
   border-radius: 40px;

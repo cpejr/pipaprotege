@@ -14,7 +14,7 @@ export const TelaIntroducao = styled.div`
 
 export const TituloCapitulo = styled.h1`
   color: white;
-  padding: 150px 20px;
+  padding: 250px 250px;
   border-radius: 10px;
   font-size: 60px;
   font-weight: bold;
