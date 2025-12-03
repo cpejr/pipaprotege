@@ -63,13 +63,13 @@ export const StyledTituloFlutuante = styled.div`
 `;
 export const BalaoImagemEsq = styled(BalaoBase)`
   top: 25%;
-  left: 10%;
+  left: 15%;
   background-image: url(${BalaoEsquerdo});
 `;
 
 export const BalaoImagemDir = styled(BalaoBase)`
   top: 25%;
-  right: 10%;
+  right: 18%;
   background-image: url(${Balao_De_Fala});
 `;
 
