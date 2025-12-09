@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import Charpter7Screen2 from "../../components/features/PadraoCap7/Tela2Capitulo7.jsx";
 
-const C7_Tela_08 = () => {
+const C7_Tela_09 = () => {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("/capitulo7/tela-09");
+    navigate("/capitulo7/tela-10");
   };
 
     const title = (
@@ -50,4 +50,4 @@ const C7_Tela_08 = () => {
   );
 };
 
-export default C7_Tela_08;
+export default C7_Tela_09;

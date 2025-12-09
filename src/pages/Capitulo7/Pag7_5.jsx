@@ -5,7 +5,7 @@ const C7_Tela_06 = () => {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("/capitulo7/tela-07");
+    navigate("/capitulo7/tela-06");
   };
 
     const title = (
