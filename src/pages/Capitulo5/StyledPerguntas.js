@@ -32,8 +32,8 @@ export const Container = styled.div`
 `;
 
 export const DivText = styled.div`
-  width: 80%;
-  margin-top: 15px;
+  width: 100%;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +43,7 @@ export const StyledImage = styled.img`
   width: 60%;
   height: auto;
   object-fit: contain;
+  display: block;
 `;
 
 export const Texto = styled.p`
