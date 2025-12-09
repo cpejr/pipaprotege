@@ -1,5 +1,5 @@
 import Button from "../../common/Button/Button";
-import { TelaCenario, BotaoContainer, QuadroMensagem } from "./ReceitaStyles.js";
+import { TelaCenario, BotaoContainer, QuadroMensagem, PlaceholderDiv } from "./ReceitaStyles.js";
 
 const Chapter8Receita = ({ onAdvance, onBack, content }) => {
   const BackButtonOrPlaceholder = onBack ? (
@@ -7,7 +7,7 @@ const Chapter8Receita = ({ onAdvance, onBack, content }) => {
       VOLTAR
     </Button>
   ) : (
-    <div style={{ width: "20vw", maxWidth: "350px", height: "70px" }}></div>
+    <PlaceholderDiv />
   );
 
   return (

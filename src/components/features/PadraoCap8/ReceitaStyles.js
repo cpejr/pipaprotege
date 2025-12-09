@@ -68,3 +68,9 @@ export const QuadroMensagem = styled.div`
     padding: 0;
   }
 `;
+
+export const PlaceholderDiv = styled.div`
+  width: 20vw;
+  max-width: 350px;
+  height: 70px;
+`;

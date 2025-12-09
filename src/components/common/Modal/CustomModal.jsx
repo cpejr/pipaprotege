@@ -26,11 +26,11 @@ const CustomModal = ({ children, isOpen, imageUrl, footer, isBottomPositioned = 
 
   if (isBottomPositioned) {
     modalStyle = {
-      top: 400,
+      top: "60vh",
     };
   } else {
     modalStyle = {
-      top: 200,
+      top: "60vh",
     };
   }
 

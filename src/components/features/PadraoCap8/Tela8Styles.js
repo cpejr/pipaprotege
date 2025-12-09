@@ -88,21 +88,21 @@ export const CachorroOverlay = styled.img`
 
 const BalaoBase = styled.div`
   position: absolute;
-  width: 450px;
-  height: 300px;
+  width: 33vw;
+  height: 25vw;
   background-size: contain;
   background-repeat: no-repeat;
 `;
 
 export const BalaoImagemEsq = styled(BalaoBase)`
   top: 25%;
-  left: 10%;
+  left: 12%;
   background-image: url(${BalaoEsquerdo});
 `;
 
 export const BalaoImagemDir = styled(BalaoBase)`
   top: 25%;
-  right: 10%;
+  right: 12%;
   background-image: url(${Balao_De_Fala});
 `;
 
@@ -116,7 +116,7 @@ export const TextoBalao = styled.p`
   margin: 0;
 
   text-align: center;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-weight: bold;
   font-family: Arial;
   line-height: 1.4;
