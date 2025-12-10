@@ -8,8 +8,13 @@ const C4_Tela_03 = () => {
     navigate("/capitulo4/tela-04");
   };
 
-  const contentText =
-    'Já o toque de desconfiança é quando alguém toca você e te faz sentir estranho ou com medo. Se acontecer, diga "Não" e peça ajuda para um adulto que você confia!';
+  const contentText = (
+    <>
+      Já o <strong style={{ fontWeight: "black" }}>toque de desconfiança</strong> é quando alguém
+      toca você e te faz sentir estranho ou com medo. Se acontecer, diga "Não" e peça ajuda para um
+      adulto que você confia!
+    </>
+  );
 
   return <ChapterScreen text={contentText} onAdvance={handleAdvance} characterVariant='variant1' />;
 };
