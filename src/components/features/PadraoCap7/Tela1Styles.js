@@ -27,16 +27,15 @@ const BalaoBase = styled.div`
   background-repeat: no-repeat;
 `;
 
-
 export const BalaoImagemEsq = styled(BalaoBase)`
   top: 25%;
-  left: 10%;
+  left: 20%;
   background-image: url(${BalaoEsquerdo});
 `;
 
 export const BalaoImagemDir = styled(BalaoBase)`
   top: 25%;
-  right: 10%;
+  right: 15%;
   background-image: url(${Balao_De_Fala});
 `;
 
@@ -59,7 +58,6 @@ export const TextoBalao = styled.p`
     font-weight: 900;
   }
 `;
-
 
 export const CachorroOverlay = styled.img`
   position: absolute;

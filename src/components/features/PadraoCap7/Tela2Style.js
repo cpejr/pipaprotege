@@ -2,7 +2,6 @@ import styled from "styled-components";
 import quadro from "../../../assets/Capitulo7Img/Quadroverde.png";
 import quadrado from "../../../assets/Capitulo7Img/IconQuadro.png";
 
-
 export const TelaCenario = styled.div`
   height: 100vh;
   width: 100vw;
@@ -21,26 +20,25 @@ export const Titulo = styled.h1`
   font-family: Arial, sans-serif;
   text-transform: uppercase;
   position: absolute;
-  upper: 20px;
   top: 20px;
   text-align: center;
-  left: 50%;  
+  left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-`; 
+`;
 
 export const Container = styled.div`
   display: flex;
   transform: translateY(-5%);
-  flex-direction : column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:100vh;
+  height: 100vh;
   gap: 15px;
-  `;
+`;
 
 export const Linha = styled.div`
-  display : flex;
+  display: flex;
   flex-direction: row;
   gap: 48px;
   width: 85%;
@@ -56,23 +54,18 @@ export const Quadrado = styled.div`
   justify-content: center;
   align-items: center;
 
-
-
   background-color: red;
   border: 3px solid black;
   border-radius: 8px;
-  `;
+`;
 
-export const  TextoQuadrado = styled.p`
+export const TextoQuadrado = styled.p`
   color: white;
   font-size: 30px;
   font-weight: bold;
   position: absolute;
 
-
-  
-  gap: 10px
-
+  gap: 10px;
 `;
 
 export const TextoLado = styled.p`
