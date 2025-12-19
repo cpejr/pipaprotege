@@ -21,13 +21,13 @@ export const TituloCapitulo = styled.h1`
   font-family: Arial, sans-serif;
   text-transform: uppercase;
   position: absolute;
-  bottom: 50px;
-  left: 200px;
+  bottom: 12%;
+  left: 12%;
 `;
 
 export const BotaoContainerIntro = styled.div`
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
 `;
