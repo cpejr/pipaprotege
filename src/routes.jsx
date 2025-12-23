@@ -17,6 +17,8 @@ import Capitulo from "./pages/Capitulos/Capitulo";
 import Capitulo1RoutesJSX from "./Routes/routesCap1";
 import Capitulo4RoutesJSX from "./Routes/routesCap4";
 import Capitulo3RoutesJSX from "./Routes/routesCap3";
+import Capitulo5RoutesJSX from "./Routes/routesCap5";
+import Capitulo6RoutesJSX from "./Routes/routesCap6";
 import Capitulo9RoutesJSX from "./Routes/routesCap9";
 import Capitulo8RoutesJSX from "./Routes/routesCap8";
 import Capitulo7RoutesJSX from "./Routes/routesCap7.jsx";
@@ -27,7 +29,7 @@ import ExitPage from "./pages/ExitPage/ExitPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<AppLayout/>}>
+    <Route path='/' element={<AppLayout />}>
       <Route index element={<Home />} />
       <Route path='cartilha' element={<Cartilha />} />
       <Route path='denuncia' element={<Denuncia />} />
@@ -46,6 +48,8 @@ const router = createBrowserRouter(
       {Capitulo7RoutesJSX}
       {Capitulo9RoutesJSX}
       {Capitulo8RoutesJSX}
+      {Capitulo5RoutesJSX}
+      {Capitulo6RoutesJSX}
     </Route>
   )
 );

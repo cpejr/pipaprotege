@@ -22,15 +22,26 @@ const FooterContainer = styled.div`
   justify-content: flex-end;
 `;
 
-function ModalButton({ content, imageUrl, buttonText = "Abrir Modal" }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+function ModalButton({
+  content,
+  imageUrl,
+  buttonText = "Abrir Modal",
+  onOk,
+  showButton = true,
+  defaultOpen = false,
+}) {
+  const [isModalOpen, setIsModalOpen] = useState(defaultOpen);
 
   const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    if (onOk) onOk();
+  };
 
   return (
     <>
-      <YellowButton onClick={handleOpenModal}>{buttonText}</YellowButton>
+      {showButton && <YellowButton onClick={handleOpenModal}>{buttonText}</YellowButton>}
       <CustomModal
         isOpen={isModalOpen}
         imageUrl={imageUrl}

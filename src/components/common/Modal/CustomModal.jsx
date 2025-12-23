@@ -21,16 +21,16 @@ const ModalImage = styled.img`
   margin-bottom: 10px;
 `;
 
-const CustomModal = ({ children, isOpen, imageUrl, footer, isBottomPositioned = false }) => {
+const CustomModal = ({ children, isOpen, imageUrl, footer, isBottomPositioned = false, width }) => {
   let modalStyle = {};
 
   if (isBottomPositioned) {
     modalStyle = {
-      top: "60vh",
+      top: 400,
     };
   } else {
     modalStyle = {
-      top: "60vh",
+      top: 200,
     };
   }
 
@@ -42,6 +42,7 @@ const CustomModal = ({ children, isOpen, imageUrl, footer, isBottomPositioned = 
       closeIcon={false}
       mask={false}
       style={modalStyle}
+      width={width}
     >
       <ModalContent $isBottomPositioned={isBottomPositioned}>
         {imageUrl && <ModalImage src={imageUrl} alt='Modal Visual' />}

@@ -265,5 +265,19 @@ export const StyledButton = styled(AntdButton)`
     border: 4px solid ${COLORS.white} !important;
   }
 
-  ${(props) => props.monochromatic && monochromaticStyles}
+  &.amarelo {
+    background-color: ${COLORS.yellow};
+    color: ${COLORS.text};
+    border: 3px solid black;
+    width: 260px;
+    height: 80px;
+    border-radius: 0;
+    justify-content: center;
+    font-size: 28px;
+    transition: transform 0.15s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 `;
