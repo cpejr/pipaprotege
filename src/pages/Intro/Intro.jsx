@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-=======
->>>>>>> Capitulo9
 import { Container, CircleButton } from "./Styles";
 
 export default function Intro() {
