@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import escola from "../../../assets/Capitulo7Img/PaginaFundo.png";
 
-import EmPe1 from "../../../assets/Capitulo7Img/pipaJaleco.png";
+import EmPe1 from "../../../assets/Capitulo7Img/PipaJaleco.png";
 import EmPe2 from "../../../assets/Capitulo1Img/Cachorro/EmPe2.png";
 import BalaoEsquerdo from "../../../assets/Capitulo9Img/BalaoEsquerdo.png";
 import Balao_De_Fala from "../../../assets/Capitulo1Img/Balao_De_Fala.png";
