@@ -23,94 +23,31 @@ import C4_Tela_19 from "../pages/Capitulo4/Pag4_19";
 import C4_Tela_20 from "../pages/Capitulo4/Pag4_20";
 import C4_Tela_21 from "../pages/Capitulo4/C4_UltimaPag/Pag4_21";
 
-const Capitulo4RoutesJSX = [
-  {
-    path: "/capitulo4",
-    element: <C4_Introducao />,
-  },
-  {
-    path: "/capitulo4/tela-01",
-    element: <C4_Tela_01 />,
-  },
-  {
-    path: "/capitulo4/tela-02",
-    element: <C4_Tela_02 />,
-  },
-  {
-    path: "/capitulo4/tela-03",
-    element: <C4_Tela_03 />,
-  },
-  {
-    path: "/capitulo4/tela-04",
-    element: <C4_Tela_04 />,
-  },
-  {
-    path: "/capitulo4/tela-05",
-    element: <C4_Tela_05 />,
-  },
-  {
-    path: "/capitulo4/tela-06",
-    element: <C4_Tela_06 />,
-  },
-  {
-    path: "/capitulo4/tela-07",
-    element: <C4_Tela_07 />,
-  },
-  {
-    path: "/capitulo4/tela-08",
-    element: <C4_Tela_08 />,
-  },
-  {
-    path: "/capitulo4/tela-09",
-    element: <C4_Tela_09 />,
-  },
-  {
-    path: "/capitulo4/tela-10",
-    element: <C4_Tela_10 />,
-  },
-  {
-    path: "/capitulo4/tela-11",
-    element: <C4_Tela_11 />,
-  },
-  {
-    path: "/capitulo4/tela-12",
-    element: <C4_Tela_12 />,
-  },
-  {
-    path: "/capitulo4/tela-13",
-    element: <C4_Tela_13 />,
-  },
-  {
-    path: "/capitulo4/tela-14",
-    element: <C4_Tela_14 />,
-  },
-  {
-    path: "/capitulo4/tela-15",
-    element: <C4_Tela_15 />,
-  },
-  {
-    path: "/capitulo4/tela-16",
-    element: <C4_Tela_16 />,
-  },
-  {
-    path: "/capitulo4/tela-17",
-    element: <C4_Tela_17 />,
-  },
-  {
-    path: "/capitulo4/tela-18",
-    element: <C4_Tela_18 />,
-  },
-  {
-    path: "/capitulo4/tela-19",
-    element: <C4_Tela_19 />,
-  },
-  {
-    path: "/capitulo4/tela-20",
-    element: <C4_Tela_20 />,
-  },
-  {
-    path: "/capitulo4/tela-21",
-    element: <C4_Tela_21 />,
-  },
-];
+const Capitulo4RoutesJSX = (
+  <Route path='capitulo4'>
+    <Route index element={<C4_Introducao />} />
+    <Route path='tela-01' element={<C4_Tela_01 />} />
+    <Route path='tela-02' element={<C4_Tela_02 />} />
+    <Route path='tela-03' element={<C4_Tela_03 />} />
+    <Route path='tela-04' element={<C4_Tela_04 />} />
+    <Route path='tela-05' element={<C4_Tela_05 />} />
+    <Route path='tela-06' element={<C4_Tela_06 />} />
+    <Route path='tela-07' element={<C4_Tela_07 />} />
+    <Route path='tela-08' element={<C4_Tela_08 />} />
+    <Route path='tela-09' element={<C4_Tela_09 />} />
+    <Route path='tela-10' element={<C4_Tela_10 />} />
+    <Route path='tela-11' element={<C4_Tela_11 />} />
+    <Route path='tela-12' element={<C4_Tela_12 />} />
+    <Route path='tela-13' element={<C4_Tela_13 />} />
+    <Route path='tela-14' element={<C4_Tela_14 />} />
+    <Route path='tela-15' element={<C4_Tela_15 />} />
+    <Route path='tela-16' element={<C4_Tela_16 />} />
+    <Route path='tela-17' element={<C4_Tela_17 />} />
+    <Route path='tela-18' element={<C4_Tela_18 />} />
+    <Route path='tela-19' element={<C4_Tela_19 />} />
+    <Route path='tela-20' element={<C4_Tela_20 />} />
+    <Route path='tela-21' element={<C4_Tela_21 />} />
+  </Route>
+);
+
 export default Capitulo4RoutesJSX;
