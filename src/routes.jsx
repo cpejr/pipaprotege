@@ -27,7 +27,7 @@ import ExitPage from "./pages/ExitPage/ExitPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<AppLayout/>}>
+    <Route path='/' element={<AppLayout />}>
       <Route index element={<Home />} />
       <Route path='cartilha' element={<Cartilha />} />
       <Route path='denuncia' element={<Denuncia />} />

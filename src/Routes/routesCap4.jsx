@@ -23,7 +23,7 @@ import C4_Tela_19 from "../pages/Capitulo4/Pag4_19";
 import C4_Tela_20 from "../pages/Capitulo4/Pag4_20";
 import C4_Tela_21 from "../pages/Capitulo4/C4_UltimaPag/Pag4_21";
 
-export const capitulo4Routes = [
+const Capitulo4RoutesJSX = [
   {
     path: "/capitulo4",
     element: <C4_Introducao />,
@@ -113,3 +113,4 @@ export const capitulo4Routes = [
     element: <C4_Tela_21 />,
   },
 ];
+export default Capitulo4RoutesJSX;
