@@ -64,7 +64,7 @@ export const BalaoImagem = styled.div`
       case "variant1":
         return `
           top: 8%;
-          left: 54%;
+          left: 56%;
           width: 400px;
           height: 250px;
         `;
@@ -73,12 +73,12 @@ export const BalaoImagem = styled.div`
           top: 46%;
           left: 56%;
           width: 400px;
-          height: 400px;
+          height: 420px;
         `;
       case "variant3":
         return `
           top: 8%;
-          left: 19%;
+          left: 21%;
           width: 400px;
           height: 250px;
         `;
