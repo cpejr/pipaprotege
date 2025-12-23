@@ -1,4 +1,5 @@
 import { Container, CircleButton } from "./Styles";
+import { useNavigate } from "react-router-dom";
 
 export default function Intro() {
   const navigate = useNavigate();
