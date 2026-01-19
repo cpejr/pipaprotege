@@ -45,10 +45,6 @@ const router = createBrowserRouter(
       <Route path='capitulo/:numero' element={<Capitulo />} />
       {Capitulo1RoutesJSX}
       {Capitulo2RoutesJSX}
-<<<<<<< HEAD
-      {Capitulo4RoutesJSX}
-=======
->>>>>>> Capitulo2
       {Capitulo3RoutesJSX}
       {Capitulo4RoutesJSX}
       {Capitulo7RoutesJSX}

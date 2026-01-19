@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
-import ChapterScreen from "../../components/features/PadraoCap2/ChapterScreen";
+import ScreenBody from "../../components/features/PadraoCap2/ScreenBody.jsx";
 
-const C2 = () => {
+const C2_Esqueleto = () => {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("/capitulo1/tela-05");
+    navigate("/capitulo2/tela-06");
   };
 
-  return <ChapterScreen onAdvance={handleAdvance} />;
+  return <ScreenBody onAdvance={handleAdvance} />;
 };
 
-export default C2;
+export default C2_Esqueleto;

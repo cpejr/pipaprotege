@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import fundo from "../../../assets/cap2fundo.png";
+import laboratorio from "../../../assets/Capitulo2/laboratorio.png";
 import Balao_De_Fala from "../../../assets/Capitulo1Img/Balao_De_Fala.png";
 
-import EmPe1 from "../../../assets/Capitulo1Img/Cachorro/EmPe1.png";
-import EmPe2 from "../../../assets/Capitulo1Img/Cachorro/EmPe2.png";
+import EmPe1 from "../../../assets/Capitulo2/laboAcenando.png";
+import EmPe2 from "../../../assets/Capitulo2/laboParado.png";
 
 export const CHARACTER_IMAGES = {
   variant1: EmPe1,
@@ -13,11 +13,12 @@ export const CHARACTER_IMAGES = {
 export const TelaCenario = styled.div`
   height: 100vh;
   width: 100vw;
-  background-image: url(${fundo});
-  background-size: 126% auto;
-  background-position: 0% bottom;
   box-sizing: border-box;
+  background-image: url(${laboratorio});
+  background-size: 100% 100%;
+  background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 `;
 
 export const BalaoImagem = styled.div`
@@ -25,8 +26,8 @@ export const BalaoImagem = styled.div`
   top: 30%;
   left: 23%;
 
-  width: 400px;
-  height: 250px;
+  width: 450px;
+  height: 300px;
   z-index: 15;
 
   background-image: url(${Balao_De_Fala});
@@ -36,7 +37,7 @@ export const BalaoImagem = styled.div`
 
 export const TextoBalao = styled.p`
   position: absolute;
-  top: 50%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -44,14 +45,13 @@ export const TextoBalao = styled.p`
   margin: 0;
 
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   font-family: Arial;
-  color: #000;
   line-height: 1.4;
 
-  @media (max-width: 480px) {
-    font-size: 16px;
+  & strong {
+    font-weight: 900;
   }
 `;
 
@@ -71,52 +71,4 @@ export const BotaoContainer = styled.div`
   display: flex;
   gap: 60px;
   z-index: 20;
-`;
-
-export const ImagemEsquerda = styled.img`
-  position: absolute;
-  bottom: 30px;
-  left: 10%;
-  height: 93%;
-  object-fit: contain;
-  z-index: 12;
-`;
-
-export const ImagemDireita = styled.img`
-  position: absolute;
-  bottom: 40%;
-  right: 9%;
-  height: 45%;
-  object-fit: contain;
-  z-index: 12;
-`;
-
-export const TextoClicavelDireita = styled.p`
-  position: absolute;
-  top: 70px;
-  right: 49%;
-  font-size: 20px;
-  color: #8c52ff;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 30;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-export const TextoClicavelEsquerda = styled.p`
-  position: absolute;
-  bottom: 300px;
-  left: 14%;
-  font-size: 20px;
-  color: #8c52ff;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 30;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
