@@ -8,7 +8,12 @@ const C4_Tela_04 = () => {
     navigate("/capitulo4/tela-05");
   };
 
-  const contentText = "Agora é hora de correr! Vamos para a Pista de Proteção?";
+  const contentText = (
+    <>
+      Agora é hora de correr! Vamos para a{" "}
+      <strong style={{ fontWeight: "black" }}>Pista de Proteção?</strong>
+    </>
+  );
 
   return <ChapterScreen text={contentText} onAdvance={handleAdvance} characterVariant='variant1' />;
 };

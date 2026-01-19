@@ -18,11 +18,19 @@ import Capitulo1RoutesJSX from "./Routes/routesCap1";
 import Capitulo2RoutesJSX from "./Routes/routesCap2";
 import Capitulo4RoutesJSX from "./Routes/routesCap4";
 import Capitulo3RoutesJSX from "./Routes/routesCap3";
+import Capitulo5RoutesJSX from "./Routes/routesCap5";
+import Capitulo6RoutesJSX from "./Routes/routesCap6";
 import Capitulo9RoutesJSX from "./Routes/routesCap9";
+import Capitulo8RoutesJSX from "./Routes/routesCap8";
+import Capitulo7RoutesJSX from "./Routes/routesCap7.jsx";
+
+import AppLayout from "./AppLayout/AppLayout.jsx";
+
+import ExitPage from "./pages/ExitPage/ExitPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/'>
+    <Route path='/' element={<AppLayout />}>
       <Route index element={<Home />} />
       <Route path='cartilha' element={<Cartilha />} />
       <Route path='denuncia' element={<Denuncia />} />
@@ -32,12 +40,18 @@ const router = createBrowserRouter(
         <Route path='2' element={<DeOndeVim2 />} />
         <Route path='3' element={<DeOndeVim3 />} />
       </Route>
+
+      <Route path='tela-saida' element={<ExitPage />} />
       <Route path='capitulo/:numero' element={<Capitulo />} />
       {Capitulo1RoutesJSX}
       {Capitulo2RoutesJSX}
       {Capitulo3RoutesJSX}
       {Capitulo4RoutesJSX}
+      {Capitulo7RoutesJSX}
       {Capitulo9RoutesJSX}
+      {Capitulo8RoutesJSX}
+      {Capitulo5RoutesJSX}
+      {Capitulo6RoutesJSX}
     </Route>
   )
 );

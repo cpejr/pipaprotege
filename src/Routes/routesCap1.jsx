@@ -15,6 +15,7 @@ import C1_Tela_10 from "../pages/Capitulo1/Pag1_10";
 import C1_Tela_11 from "../pages/Capitulo1/Pag1_11";
 
 const Capitulo1RoutesJSX = (
+  
   <Route path='capitulo1'>
     <Route index element={<C1_Introducao />} />
 

@@ -57,7 +57,8 @@ function InputModal({
   showButton = true,
   isBottomPositioned = false,
   correctAnswer,
-  children,
+  onOk,
+  width,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(defaultOpen);
   const [inputValue, setInputValue] = useState("");
@@ -98,6 +99,11 @@ function InputModal({
 
     handleCloseModal();
 
+    if (onOk) {
+      onOk(trimmedInput);
+      return;
+    }
+
     if (nextPath) {
       navigate(nextPath);
     } else if (backPath) {
@@ -118,6 +124,7 @@ function InputModal({
             </Button>
           </FooterContainer>,
         ]}
+        width={width}
       >
         {children}
         <StyledTextarea
