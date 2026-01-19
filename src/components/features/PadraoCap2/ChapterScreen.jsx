@@ -29,7 +29,7 @@ const ChapterScreen = ({ text, onAdvance, characterVariant = "default" }) => {
           </Button>
         )}
       </BotaoContainer>
-    </TelaCenario>
+    </TelaCenario>  
   );
 };
 

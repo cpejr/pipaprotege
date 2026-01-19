@@ -25,6 +25,7 @@ import C2_Tela_22 from "../pages/Capitulo2/Pag2_22";
 import C2_Tela_23 from "../pages/Capitulo2/Pag2_23";
 import C2_Tela_24 from "../pages/Capitulo2/Pag2_24";
 import C2_Tela_25 from "../pages/Capitulo2/Pag2_25";
+import C2_Esqueleto from "../pages/Capitulo2/Esqueleto";
 
 const Capitulo2RoutesJSX = (
   <Route path='capitulo2'>
@@ -34,6 +35,7 @@ const Capitulo2RoutesJSX = (
     <Route path='tela-02' element={<C2_Tela_02 />} />
     <Route path='tela-03' element={<C2_Tela_03 />} />
     <Route path='tela-04' element={<C2_Tela_04 />} />
+    <Route path='tela-05' element={<C2_Esqueleto />} />
     <Route path='tela-06' element={<C2_Tela_06 />} />
     <Route path='tela-07' element={<C2_Tela_07 />} />
     <Route path='tela-08' element={<C2_Tela_08 />} />
