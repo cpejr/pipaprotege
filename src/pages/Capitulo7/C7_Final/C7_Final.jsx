@@ -12,7 +12,7 @@ export default function C7_Final(){
     const navigate = useNavigate();
     
       const handleAdvance = () => {
-        navigate("/");
+        navigate("/intro");
       };
     
     return(

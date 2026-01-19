@@ -164,11 +164,11 @@ export const IconeImagem = styled.img`
 
 export const StyledSequenciaFlutuante = styled.div`
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: #f86e32;
+  background-color: transparent;
   padding: 15px 40px;
 `;
 

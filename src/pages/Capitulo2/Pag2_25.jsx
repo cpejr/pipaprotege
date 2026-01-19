@@ -5,7 +5,7 @@ const C2_Tela_25 = () => {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("/");
+    navigate("/intro");
   };
 
   const contentText = (

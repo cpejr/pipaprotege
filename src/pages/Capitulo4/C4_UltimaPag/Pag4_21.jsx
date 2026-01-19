@@ -7,7 +7,7 @@ const C4_Tela_21 = () => {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("/capitulo4/fim");
+    navigate("/intro");
   };
 
   return (

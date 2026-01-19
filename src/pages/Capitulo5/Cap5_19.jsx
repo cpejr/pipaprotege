@@ -7,7 +7,7 @@ export default function C5_Tela_15() {
   const navigate = useNavigate();
 
   const handleAdvance = () => {
-    navigate("/capitulo5");
+    navigate("/intro");
   };
 
   const baloes = [

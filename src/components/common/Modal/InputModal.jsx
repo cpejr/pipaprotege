@@ -126,7 +126,6 @@ function InputModal({
         ]}
         width={width}
       >
-        {children}
         <StyledTextarea
           placeholder={initialPlaceholder}
           value={inputValue}
