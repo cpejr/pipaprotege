@@ -1,7 +1,7 @@
 import { CloseOutlined, ArrowRightOutlined, ArrowLeftOutlined } from "@ant-design/icons";
 import { StyledButton } from "./StyledButton";
 
-const Button = ({ children, onClick, type, ...rest }) => {
+const Button = ({ children, onClick, type, monochromatic, ...rest }) => {
   let iconComponent;
   if (type === "close" || type === "xis") {
     iconComponent = <CloseOutlined />;
@@ -13,7 +13,7 @@ const Button = ({ children, onClick, type, ...rest }) => {
 
   if (type === "avancar" || type === "voltar" || type === "close") {
     return (
-      <StyledButton className={type} onClick={onClick} {...rest}>
+      <StyledButton className={type} onClick={onClick} monochromatic={monochromatic} {...rest}>
         <div className='yellow-wrapper'>{children}</div>
         {iconComponent}
       </StyledButton>
@@ -21,7 +21,7 @@ const Button = ({ children, onClick, type, ...rest }) => {
   }
 
   return (
-    <StyledButton className={type} onClick={onClick} {...rest}>
+    <StyledButton className={type} onClick={onClick} monochromatic={monochromatic} {...rest}>
       {iconComponent}
       {children}
     </StyledButton>

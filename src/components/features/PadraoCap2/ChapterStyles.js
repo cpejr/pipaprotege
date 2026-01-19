@@ -16,7 +16,8 @@ export const TelaCenario = styled.div`
   background-image: url(${fundo});
   background-size: 126% auto;
   background-position: 0% bottom;
-  position: relative;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
 `;
 
 export const BalaoImagem = styled.div`

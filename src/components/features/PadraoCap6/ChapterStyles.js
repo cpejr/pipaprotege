@@ -67,8 +67,8 @@ export const BalaoImagem = styled.div`
     switch ($variant) {
       case "variant1":
         return `
-          top: 13%;
-          left: 54%;
+          top: 15%;
+          left: 56%;
           width: 400px;
           height: 250px;
         `;
@@ -81,8 +81,8 @@ export const BalaoImagem = styled.div`
         `;
       case "variant3":
         return `
-          top: 13%;
-          left: 19%;
+          top: 15%;
+          left: 22%;
           width: 400px;
           height: 250px;
         `;
