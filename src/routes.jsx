@@ -15,6 +15,7 @@ import Intro from "./pages/Intro/Intro";
 import Capitulo from "./pages/Capitulos/Capitulo";
 
 import Capitulo1RoutesJSX from "./Routes/routesCap1";
+import Capitulo2RoutesJSX from "./Routes/routesCap2";
 import Capitulo4RoutesJSX from "./Routes/routesCap4";
 import Capitulo3RoutesJSX from "./Routes/routesCap3";
 import Capitulo5RoutesJSX from "./Routes/routesCap5";
@@ -43,6 +44,7 @@ const router = createBrowserRouter(
       <Route path='tela-saida' element={<ExitPage />} />
       <Route path='capitulo/:numero' element={<Capitulo />} />
       {Capitulo1RoutesJSX}
+      {Capitulo2RoutesJSX}
       {Capitulo3RoutesJSX}
       {Capitulo4RoutesJSX}
       {Capitulo7RoutesJSX}
