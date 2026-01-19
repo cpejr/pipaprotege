@@ -58,7 +58,7 @@ export const CloseButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-radius: 6px;
   color: white;
   font-size: 3.5rem;
 

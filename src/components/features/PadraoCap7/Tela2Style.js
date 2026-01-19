@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import quadro from "../../../assets/Capitulo7Img/Quadroverde.png";
-import quadrado from "../../../assets/Capitulo7Img/IconQuadro.png";
+import quadro from "../../../assets/Capitulo7Img/QuadroVerde.png";
 
 export const TelaCenario = styled.div`
   height: 100vh;
