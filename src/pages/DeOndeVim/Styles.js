@@ -43,7 +43,7 @@ export const CloseButton = styled(Link)`
   }
 `;
 
-export const ArrowButton = styled(Link)`
+export const ArrowButton = styled.button`
   position: absolute;
   bottom: 5%;
   ${(props) => (props.right ? "right: 5%;" : "left: 5%;")}

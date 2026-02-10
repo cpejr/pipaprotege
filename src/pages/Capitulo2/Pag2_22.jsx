@@ -1,6 +1,6 @@
 import BackgroundBege from "../../components/features/PadraoCap2/TelaBege";
 import RiddleQuizModal from "../../components/features/PadraoCap2/QuizModal";
-
+import { RiddleContentWrapper, NumberTag, QuestionText } from "./Styles";
 const C2_Tela_22 = () => {
   const charada = {
     number: 9,
@@ -20,6 +20,13 @@ const C2_Tela_22 = () => {
         nextPath={charada.nextPath}
         defaultOpen={true}
       />
+      <RiddleContentWrapper>
+        <NumberTag left='12.5%'>
+          <span>{charada.number}</span>
+        </NumberTag>
+
+        <QuestionText>{charada.question}</QuestionText>
+      </RiddleContentWrapper>
     </BackgroundBege>
   );
 };
