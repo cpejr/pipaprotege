@@ -2,8 +2,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Cartilha from "./pages/Cartilha/Cartilha";
 import Denuncia from "./pages/Denuncia/Denuncia";
-import DeOndeVim from "./pages/DeOndeVim/DeOndeVim";
-import Teste from "./pages/Teste/Teste";
+
+import DeOndeVim1 from "./pages/DeOndeVim/DeOndeVim1";
+import DeOndeVim2 from "./pages/DeOndeVim/DeOndeVim2";
+import DeOndeVim3 from "./pages/DeOndeVim/DeOndeVim3";
+
+import Intro from "./pages/Intro/Intro";
+
+import Capitulo from "./pages/Capitulos/Capitulo";
 
 const router = createBrowserRouter([
   {
@@ -18,13 +24,29 @@ const router = createBrowserRouter([
     path: "/denuncia",
     element: <Denuncia />,
   },
+
+  {
+    path: "/intro",
+    element: <Intro />,
+  },
+
   {
     path: "/de-onde-vim",
-    element: <DeOndeVim />,
+    element: <DeOndeVim1 />,
   },
   {
-    path: "/Teste",
-    element: <Teste />,
+    path: "/de-onde-vim2",
+    element: <DeOndeVim2 />,
+  },
+  {
+    path: "/de-onde-vim3",
+    element: <DeOndeVim3 />,
+  },
+
+  // Capítulos (rota dinâmica)
+  {
+    path: "/capitulo/:numero",
+    element: <Capitulo />, // Placeholder, cada capítulo vai ser resolvido depois
   },
 ]);
 
